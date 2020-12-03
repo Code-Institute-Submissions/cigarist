@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cigar Posts</title>
+</head>
+<body>
+    {% for tastingNotes in tastingNotes %}
+        {{ tastingNotes.cigarBrand }}<br>
+        {{ tastingNotes.vitola }}<br>
+        {{ tastingNotes.ringGauge }}<br>
+        {{ tastingNotes.handMade }}<br>
+        {{ tastingNotes.cigarStrength }}<br>
+        {{ tastingNotes.cigarDraw }}<br>
+        {{ tastingNotes.cigarFlavour }}<br>
+        {{ tastingNotes.cigarAroma }}<br>
+        {{ tastingNotes.cigarBurn }}<br>
+        {{ tastingNotes.price }}<br>
+    {% endfor %}
+</body>
+</html>
