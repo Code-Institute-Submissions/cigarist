@@ -1,17 +1,30 @@
 {% extends "base.html" %}
-{% block content %}
+{% block content %}    
 
-    {% for tastingNotes in tastingNotes %}
-        Brand:  {{ tastingNotes.cigarBrand }}<br>
-        {{ tastingNotes.vitola }}<br>
-        {{ tastingNotes.ringGauge }}<br>
-        {{ tastingNotes.handMade }}<br>
-        {{ tastingNotes.cigarStrength }}<br>
-        {{ tastingNotes.cigarDraw }}<br>
-        {{ tastingNotes.cigarFlavour }}<br>
-        {{ tastingNotes.cigarAroma }}<br>
-        {{ tastingNotes.cigarBurn }}<br>
-        {{ tastingNotes.price }}<br>
-    {% endfor %}
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        {% for tastingNotes in tastingNotes %}
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s6">
+                        <input type="url" id="cigar_image" name="cigar_image" class="materialize-textarea" minlength="5"
+                        maxlength="500" required>
+                        <label for="cigar_image">Add Image URL</label>
+                    </div>
+                    <div class="col s6">
+                        Brand:  {{ tastingNotes.cigarBrand }}<br>
+                        Vitola: {{ tastingNotes.vitola }}<br>
+                        Ring Gauge: {{ tastingNotes.ringGauge }}<br>
+                        Handmade:   {{ tastingNotes.handMade }}<br>
+                        Strength:   {{ tastingNotes.cigarStrength }}<br>
+                        Draw:   {{ tastingNotes.cigarDraw }}<br>
+                        Flavour:    {{ tastingNotes.cigarFlavour }}<br>
+                        Aroma:  {{ tastingNotes.cigarAroma }}<br>
+                        Burn:   {{ tastingNotes.cigarBurn }}<br>
+                        Price:  {{ tastingNotes.price }}<br>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
