@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% block content %}    
 
+    <h2 class="orange-text center-align">All Posts</h2>
+
     <div class="col s12 m8 offset-m2 l6 offset-l3">
         {% for tastingNotes in tastingNotes %}
             <div class="card-panel grey lighten-5 z-depth-1">
                 <div class="row valign-wrapper">
                     <div class="col s6">
-                        <img src="{{ tastingNotes.cigarImage }}">
+                        <img src="{{ tastingNotes.cigarImage }}" width="375" height="250" alt="User Cigar Images">
                     </div>
                     <div class="col s6">
+                        <p>
                         Brand:  {{ tastingNotes.cigarBrand }}<br>
                         Vitola: {{ tastingNotes.vitola }}<br>
                         Ring Gauge: {{ tastingNotes.ringGauge }}<br>
@@ -21,6 +24,7 @@
                         Price:  {{ tastingNotes.price }}<br>
                         Notes:  {{ tastingNotes.notes }}<br>
                         Added By: {{ tastingNotes.created_by }}
+                        </p>
                     </div>
                 </div>
             </div>
