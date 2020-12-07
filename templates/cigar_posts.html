@@ -26,7 +26,9 @@
                         Added By: {{ tastingNotes.created_by }}
                         </p>
                         <div class="col m6">
-                            <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange waves-effect">Edit Post</a>
+                            {% if session.user|lower == tastingNotes.created_by|lower %}
+                                <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange waves-effect">Edit Post</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
