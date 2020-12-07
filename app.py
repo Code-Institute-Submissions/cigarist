@@ -25,6 +25,13 @@ def get_cigars():
     return render_template("cigar_posts.html", tastingNotes=tastingNotes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    tastingNotes = (mongo.db.tastingNotes.find({"$text": {"$search": query}}))
+    return render_template("cigar_posts.html", tastingNotes=tastingNotes)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -141,6 +148,13 @@ def edit_post(post_id):
 
     tastingNotes = mongo.db.tastingNotes.find_one({"_id": ObjectId(post_id)})
     return render_template("edit_post.html", tastingNotes=tastingNotes)
+
+
+@app.route("/delete_post/<post_id>")
+def delete_post(post_id):
+    mongo.db.tasks.remove({"_id": ObjectId(post_id)})
+    flash("Your post has been removed")
+    return redirect(url_for("get_cigars"))
 
 
 if __name__ == "__main__":
