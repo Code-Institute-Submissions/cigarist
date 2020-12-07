@@ -93,12 +93,34 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_post")
+@app.route("/add_post", methods=["GET", "POST"])
 def add_post():
+    if request.method == "POST":
+        tastingNotes = {
+            "cigarImage": request.form.get("cigarImage"),
+            "cigarBrand": request.form.get("cigarBrand"),
+            "vitola": request.form.get("vitola"),
+            "ringGauge": request.form.get("ringGauge"),
+            "handMade": request.form.get("handMade"),
+            "cigarStrength": request.form.get("cigarStrength"),
+            "cigarDraw": request.form.get("cigarDraw"),
+            "cigarFlavour": request.form.get("cigarFlavour"),
+            "cigarAroma": request.form.get("cigarAroma"),
+            "cigarBurn": request.form.get("cigarBurn"),
+            "price": request.form.get("price"),
+            "notes": request.form.get("notes"),
+            "created_by": session["user"]
+        }
+        mongo.db.tastingNotes.insert_one(tastingNotes)
+        flash("Your Post Is Added!")
+        return redirect(url_for("add_post"))
+
     return render_template("add_post.html")
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=True) 
+
+# Turn to false before project submission
