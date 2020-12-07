@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block content %}   
+
+    <h2 class="orange-text center-align">Edit A Post</h2>
+
+    <div class="row card-panel orange lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('edit_post', post_id=tastingNotes._id) }}">
+            <!-- Image URL -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-image prefix icon-color"></i>
+                    <input type="url" id="cigarImage" name="cigarImage" class="validate"
+                        value="{{ tastingNotes.cigarImage }}" minlength="5" maxlength="500" required>
+                    <label for="cigarImage">Add Image URL</label>
+                </div>
+            </div>
+            <!-- Brand Name -->
+            <div class="row" >
+                <div class="input-field col s12">
+                    <i class="fas fa-joint prefix icon-color"></i>
+                    <input id="cigarBrand" name="cigarBrand" minlength="3" maxlength="25" 
+                        value="{{ tastingNotes.cigarBrand }}" type="text" class="validate" required>
+                    <label for="cigarBrand">Cigar Brand</label>
+                </div>
+            </div> 
+            <!-- Cigar Vitola -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-window-minimize prefix icon-color"></i>
+                    <input id="vitola" name="vitola" minlength="3" maxlength="25" 
+                        value="{{ tastingNotes.vitola }}" type="text" class="validate" required>
+                    <label for="vitola">Vitola</label>
+                </div>
+            </div>
+            <!-- Ring Gauge -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="far fa-circle prefix icon-color"></i>
+                    <input id="ringGauge" name="ringGauge" minlength="1" maxlength="5" 
+                        value="{{ tastingNotes.ringGauge }}" type="text" class="validate" required>
+                    <label for="ringGauge">Ring Gauge</label>
+                </div>
+            </div>
+            <!-- Hand Made Cigar? -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="far fa-hand-paper prefix icon-color"></i>
+                    <input id="handMade" name="handMade" minlength="2" maxlength="3" 
+                        value="{{ tastingNotes.handMade }}" type="text" class="validate" required>
+                    <label for="handMade">Handmade</label>
+                </div>
+            </div>
+            <!-- Cigar Strength -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-dumbbell prefix icon-color"></i>
+                    <input id="cigarStrength" name="cigarStrength" minlength="3" maxlength="50" 
+                        value="{{ tastingNotes.cigarStrength }}" type="text" class="validate" required>
+                    <label for="cigarStrength">Strength</label>
+                </div>
+            </div>
+            <!-- Draw -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-lungs prefix icon-color"></i>
+                    <input id="cigarDraw" name="cigarDraw" minlength="5" maxlength="100" 
+                        value="{{ tastingNotes.cigarDraw }}" type="text" class="validate" required>
+                    <label for="cigarDraw">Draw</label>
+                </div>
+            </div>
+            <!-- Cigar Flavour -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="prefix icon-color"></i>
+                    <input id="cigarFlavour" name="cigarFlavour" minlength="5" maxlength="200" 
+                        value="{{ tastingNotes.cigarFlavour }}" type="text" class="validate" required>
+                    <label for="cigarFlavour">Flavour</label>
+                </div>
+            </div>
+            <!-- Aroma of the Cigar -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-wine-bottle prefix icon-color"></i>
+                    <input id="cigarAroma" name="cigarAroma" minlength="5" maxlength="300" 
+                        value="{{ tastingNotes.cigarAroma }}" type="text" class="validate" required>
+                    <label for="cigarAroma">Aroma</label>
+                </div>
+            </div>
+            <!-- Burn -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-burn prefix icon-color"></i>
+                    <input id="cigarBurn" name="cigarBurn" minlength="5" maxlength="100" 
+                        value="{{ tastingNotes.cigarBurn }}" type="text" class="validate" required>
+                    <label for="cigarBurn">Burn</label>
+                </div>
+            </div>
+            <!-- Price of Cigar -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-money-bill-wave prefix icon-color"></i>
+                    <input id="price" name="price" minlength="2" maxlength="8" 
+                        value="{{ tastingNotes.price }}" type="text" class="validate" required>
+                    <label for="price">Price</label>
+                </div>
+            </div>
+            <!-- Users Tasting Notes -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-clipboard prefix icon-color"></i>
+                     <textarea id="notes" name="notes" minlength="5" maxlength="1000" 
+                        class="materialize-textarea validate" required>
+                        {{- tastingNotes.notes -}}
+                    </textarea>
+                    <label for="notes">Notes</label>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="row">            
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large orange text-shadow">
+                        Edit Post <i class="fas fa-edit"></i>
+                    </button>
+                    <a href="{{ url_for('get_cigars') }}" class="btn-large orange text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

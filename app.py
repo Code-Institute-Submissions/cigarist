@@ -112,10 +112,35 @@ def add_post():
             "created_by": session["user"]
         }
         mongo.db.tastingNotes.insert_one(tastingNotes)
-        flash("Your Post Is Added!")
+        flash("You Have Made A Post!")
         return redirect(url_for("add_post"))
 
     return render_template("add_post.html")
+
+
+@app.route("/edit_post/<post_id>", methods=["GET", "POST"])
+def edit_post(post_id):
+    if request.method == "POST":
+        submit = {
+            "cigarImage": request.form.get("cigarImage"),
+            "cigarBrand": request.form.get("cigarBrand"),
+            "vitola": request.form.get("vitola"),
+            "ringGauge": request.form.get("ringGauge"),
+            "handMade": request.form.get("handMade"),
+            "cigarStrength": request.form.get("cigarStrength"),
+            "cigarDraw": request.form.get("cigarDraw"),
+            "cigarFlavour": request.form.get("cigarFlavour"),
+            "cigarAroma": request.form.get("cigarAroma"),
+            "cigarBurn": request.form.get("cigarBurn"),
+            "price": request.form.get("price"),
+            "notes": request.form.get("notes"),
+            "created_by": session["user"]
+        }
+        mongo.db.tastingNotes.update({"_id": ObjectId(post_id)}, submit)
+        flash("Your Post is Updated!")
+
+    tastingNotes = mongo.db.tastingNotes.find_one({"_id": ObjectId(post_id)})
+    return render_template("edit_post.html", tastingNotes=tastingNotes)
 
 
 if __name__ == "__main__":
