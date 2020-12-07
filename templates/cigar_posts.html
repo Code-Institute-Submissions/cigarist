@@ -6,9 +6,7 @@
             <div class="card-panel grey lighten-5 z-depth-1">
                 <div class="row valign-wrapper">
                     <div class="col s6">
-                        <input type="url" id="cigar_image" name="cigar_image" class="materialize-textarea" minlength="5"
-                        maxlength="500" required>
-                        <label for="cigar_image">Add Image URL</label>
+                        <img src="{{ tastingNotes.cigarImage }}">
                     </div>
                     <div class="col s6">
                         Brand:  {{ tastingNotes.cigarBrand }}<br>
@@ -21,7 +19,8 @@
                         Aroma:  {{ tastingNotes.cigarAroma }}<br>
                         Burn:   {{ tastingNotes.cigarBurn }}<br>
                         Price:  {{ tastingNotes.price }}<br>
-                        Notes:  {{ tastingNotes.notes }}
+                        Notes:  {{ tastingNotes.notes }}<br>
+                        Added By: {{ tastingNotes.created_by }}
                     </div>
                 </div>
             </div>
