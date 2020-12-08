@@ -156,7 +156,7 @@ def edit_post(post_id):
 
 @app.route("/delete_post/<post_id>")
 def delete_post(post_id):
-    mongo.db.tasks.remove({"_id": ObjectId(post_id)})
+    mongo.db.tastingNotes.remove({"_id": ObjectId(post_id)})
     flash("Your post has been removed")
     return redirect(url_for("get_cigars"))
 
