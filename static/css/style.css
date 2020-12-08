@@ -27,3 +27,7 @@
 .btn-small {
     margin: 0 100%;
 }
+
+.profile {
+    text-transform: uppercase;
+}
