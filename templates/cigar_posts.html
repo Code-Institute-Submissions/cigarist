@@ -22,50 +22,51 @@
         </form>
     </div>
     {% endif %}
-    
-    <div>
+
+    <div class="row">
         {% for tastingNotes in tastingNotes %}
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s12 m6 l9">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image">
                         <img src="{{ tastingNotes.cigarImage }}" class="responsive-img" alt="User Cigar Images">
                     </div>
-                    <div class="col s12 m6 l3">
+                    <div class="card-content">
                         <p>
-                        Brand:  {{ tastingNotes.cigarBrand }}<br>
-                        Vitola: {{ tastingNotes.vitola }}<br>
-                        Ring Gauge: {{ tastingNotes.ringGauge }}<br>
-                        Handmade:   {{ tastingNotes.handMade }}<br>
-                        Strength:   {{ tastingNotes.cigarStrength }}<br>
-                        Draw:   {{ tastingNotes.cigarDraw }}<br>
-                        Flavour:    {{ tastingNotes.cigarFlavour }}<br>
-                        Aroma:  {{ tastingNotes.cigarAroma }}<br>
-                        Burn:   {{ tastingNotes.cigarBurn }}<br>
-                        Price:  {{ tastingNotes.price }}<br>
-                        Notes:  {{ tastingNotes.notes }}<br>
-                        Added By: {{ tastingNotes.created_by }}
+                            Brand:  {{ tastingNotes.cigarBrand }}<br>
+                            Vitola: {{ tastingNotes.vitola }}<br>
+                            Ring Gauge: {{ tastingNotes.ringGauge }}<br>
+                            Handmade:   {{ tastingNotes.handMade }}<br>
+                            Strength:   {{ tastingNotes.cigarStrength }}<br>
+                            Draw:   {{ tastingNotes.cigarDraw }}<br>
+                            Flavour:    {{ tastingNotes.cigarFlavour }}<br>
+                            Aroma:  {{ tastingNotes.cigarAroma }}<br>
+                            Burn:   {{ tastingNotes.cigarBurn }}<br>
+                            Price:  {{ tastingNotes.price }}<br>
+                            Notes:  {{ tastingNotes.notes }}<br>
+                            Added By: {{ tastingNotes.created_by }}
                         </p>
-                        <div class="col s6 m6 l3">
-                            {% if session.user|lower == tastingNotes.created_by|lower %}
-                                <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange waves-effect">Edit</a>
-                                <a href="#delete" class="btn-small orange waves-effect modal-trigger">Delete</a>
+                    </div>
+                    <div class="card-action">
+                        {% if session.user|lower == tastingNotes.created_by|lower %}
+                            <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange waves-effect">Edit</a>
+                            <a href="#delete" class="btn-small orange waves-effect modal-trigger">Delete</a>
 
-                                    <div id="delete" class="modal">
-                                        <div class="modal-content">
-                                            <h4>Are you sure?</h4>
-                                            <p>In case you do not want to delete please click the 'Cancel' button or simply click outside of this box.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <a href="{{ url_for('delete_post', post_id=tastingNotes._id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
-                                            <a href="{{ url_for('get_cigars') }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-                                        </div>
+                                <div id="delete" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Are you sure?</h4>
+                                        <p>In case you do not want to delete please click the 'Cancel' button or simply click outside of this box.</p>
                                     </div>
-                            {% endif %}
-                        </div>
+                                    <div class="modal-footer">
+                                        <a href="{{ url_for('delete_post', post_id=tastingNotes._id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                                        <a href="{{ url_for('get_cigars') }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                                    </div>
+                                </div>
+
+                        {% endif %}
                     </div>
                 </div>
             </div>
         {% endfor %}
-    </div>
-
+  </div>
+  
 {% endblock %}
