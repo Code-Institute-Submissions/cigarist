@@ -11,7 +11,7 @@
                     <input type="text" name="query" id="query" minlength="3" class="validate" required>
                     <label for="query">Enter Search</label>                
                     <a href="{{ url_for('get_cigars') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="green btn text-shadow">
+                    <button type="submit" class="orange btn text-shadow">
                         Search
                     </button>
                 </div>
@@ -45,8 +45,8 @@
                     </div>
                     <div class="card-action">
                         {% if session.user|lower == tastingNotes.created_by|lower %}
-                            <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange waves-effect center-btn">Edit</a>
-                            <a href="#delete" class="btn-small orange waves-effect modal-trigger center-btn">Delete</a>
+                            <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange text-shadow waves-effect center-btn">Edit</a>
+                            <a href="#delete" class="btn-small red text-shadow waves-effect modal-trigger center-btn">Delete</a>
 
                                 <div id="delete" class="modal">
                                     <div class="modal-content">
