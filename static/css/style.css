@@ -35,3 +35,10 @@
 .btn-small {
     margin: 0;
 }
+
+.center-btn {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 25px;
+}
