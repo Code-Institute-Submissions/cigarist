@@ -87,13 +87,15 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+    tastingNotes = list(
+        mongo.db.tastingNotes.find({"created_by": session["user"]}))
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "profile.html", username=session["user"],
+            tastingNotes=tastingNotes)
 
     return redirect(url_for("login"))
 
