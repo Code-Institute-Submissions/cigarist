@@ -28,7 +28,8 @@ def get_cigars():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    tastingNotes_count = (mongo.db.tastingNotes.count_documents({"$text": {"$search": query}}))
+    tastingNotes_count = (
+        mongo.db.tastingNotes.count_documents({"$text": {"$search": query}}))
     if tastingNotes_count == 0:
         flash("No Posts Found")
         return redirect(url_for("get_cigars"))
