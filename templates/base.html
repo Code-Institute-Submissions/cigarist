@@ -17,7 +17,7 @@
 
     <header>
         <!-- Primary/Main Nav -->
-        <nav class="nav-extended text-shadow orange lighten-1">
+        <nav class="nav-extended text-shadow orange">
             <div class="nav-wrapper">            
             <a href="{{ url_for('get_cigars') }}" class="brand-logo">Cigarist</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
@@ -37,7 +37,7 @@
 
         <!-- Secondary/Mobile Nav -->
         <ul class="sidenav" id="mobile-demo">
-            <li class="h4 center-align orange-text text-darken-2">Cigarist</li>
+            <li class="h4 center-align orange-text">Cigarist</li>
             <li><a href="{{ url_for('get_cigars') }}">Posts</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -55,7 +55,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row message">
-                        <h3 class="col s12 m4 offset-m4 orange lighten-1 white-text text-shadow center-align">
+                        <h3 class="col s12 m4 offset-m4 orange white-text text-shadow center-align">
                             {{ message }}
                         </h3>
                     </div>
