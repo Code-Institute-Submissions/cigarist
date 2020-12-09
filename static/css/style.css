@@ -32,10 +32,6 @@
     text-transform: uppercase;
 }
 
-.btn-small {
-    margin: 0;
-}
-
 .center-btn {
     display: flex;
     justify-content: center;
