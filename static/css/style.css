@@ -30,6 +30,7 @@
 
 .profile {
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .center-btn {
