@@ -51,10 +51,10 @@
                                 <div id="delete" class="modal">
                                     <div class="modal-content">
                                         <h4>Are you sure?</h4>
-                                        <p>In case you do not want to delete please click the 'Cancel' button or simply click outside of this box.</p>
+                                        <p>In case you do not want to delete your post please click the 'Cancel' button or simply click outside of this box.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="{{ url_for('delete_post', post_id=tastingNotes._id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                                        <a href="{{ url_for('delete_post', post_id=tastingNotes._id) }}" class="modal-close waves-effect waves-green btn-flat red-text">Delete</a>
                                         <a href="{{ url_for('get_cigars') }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                                     </div>
                                 </div>
