@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}   
-
+    <!-- Start of H2 Header -->
     <h2 class="orange-text center-align">Add A Post</h2>
+    <!-- End of H2 Header -->
 
     <div class="row card-panel orange lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('add_post') }}">
-            <!-- Image URL -->
+            <!-- Image URL Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix icon-color"></i>
@@ -14,7 +15,7 @@
                     <label for="cigarImage">Add Image URL</label>
                 </div>
             </div>
-            <!-- Brand Name -->
+            <!-- Brand Name Section -->
             <div class="row" >
                 <div class="input-field col s12">
                     <i class="fas fa-joint prefix icon-color"></i>
@@ -23,7 +24,7 @@
                     <label for="cigarBrand">Cigar Brand</label>
                 </div>
             </div> 
-            <!-- Cigar Vitola -->
+            <!-- Cigar Vitola Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-window-minimize prefix icon-color"></i>
@@ -32,7 +33,7 @@
                     <label for="vitola">Vitola</label>
                 </div>
             </div>
-            <!-- Ring Gauge -->
+            <!-- Ring Gauge Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="far fa-circle prefix icon-color"></i>
@@ -41,7 +42,7 @@
                     <label for="ringGauge">Ring Gauge</label>
                 </div>
             </div>
-            <!-- Hand Made Cigar? -->
+            <!-- Hand Made Cigar Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="far fa-hand-paper prefix icon-color"></i>
@@ -50,7 +51,7 @@
                     <label for="handMade">Handmade</label>
                 </div>
             </div>
-            <!-- Cigar Strength -->
+            <!-- Cigar Strength Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-dumbbell prefix icon-color"></i>
@@ -59,7 +60,7 @@
                     <label for="cigarStrength">Strength</label>
                 </div>
             </div>
-            <!-- Draw -->
+            <!-- Draw Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-lungs prefix icon-color"></i>
@@ -68,7 +69,7 @@
                     <label for="cigarDraw">Draw</label>
                 </div>
             </div>
-            <!-- Cigar Flavour -->
+            <!-- Cigar Flavour Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-drumstick-bite prefix icon-color"></i>
@@ -77,7 +78,7 @@
                     <label for="cigarFlavour">Flavour</label>
                 </div>
             </div>
-            <!-- Aroma of the Cigar -->
+            <!-- Aroma of the Cigar Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-wine-bottle prefix icon-color"></i>
@@ -86,7 +87,7 @@
                     <label for="cigarAroma">Aroma</label>
                 </div>
             </div>
-            <!-- Burn -->
+            <!-- Burn Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-burn prefix icon-color"></i>
@@ -95,7 +96,7 @@
                     <label for="cigarBurn">Burn</label>
                 </div>
             </div>
-            <!-- Price of Cigar -->
+            <!-- Price of Cigar Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-money-bill-wave prefix icon-color"></i>
@@ -104,7 +105,7 @@
                     <label for="price">Price</label>
                 </div>
             </div>
-            <!-- Users Tasting Notes -->
+            <!-- Users Tasting Notes Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-clipboard prefix icon-color"></i>
