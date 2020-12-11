@@ -1,45 +1,70 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# CIGARIST
 
-Welcome jtwy23,
+---
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+![Logo](static/images/logi.png)
 
-## Gitpod Reminders
+---
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
+- [UX](#ux)
+- [Strategy Plane](#strategy-plane)
+- [Scope Plane](#scope-plane)
+- [Structure Plane](#structure-plane)
+- [Skeleton Plane](#skeleton-plane)
+- [Surface Plane](#surface-plane)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Responsive](#responsive)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Disclaimer](#disclaimer)
 
-`python3 -m http.server`
+Cigarist is a cigar post and review site. Users can create their own post with reviews, read their own or other user posts, update their own posts and reviews and delete their own posts.
+As a cigar enthusiast myself I often wonder if other people get the same flavours and aromas as I do or if they can get a completely different profile. This app was created to track what cigars I have tried and also to see other users reviews on cigars I may want to try in the future. On top of all that it allows me to test my theory on flavour profiles against other users flavour profiles. The website can be seen [here](https://cigarist.herokuapp.com/).
 
-A blue button should appear to click: *Make Public*,
+---
 
-Another blue button should appear to click: *Open Browser*.
+## UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+To develop this website we have broken down the UX into its five planes to define the client’s needs.
 
-A blue button should appear to click: *Make Public*,
+### Strategy Plane
+| Client Goals:                                         | User Stories:                                                                                          |
+|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| To create a site for users to post and review cigars. | As a user I would like to be able to see the site without registering.                                 |
+| A site that allows users to discover new cigars.      | As a user I would like to register quickly and easily.                                                 |
+| To have a simple and easy site for users to navigate. | As a user who is not registered I would like to be able to navigate  quickly to the registration page. |
+| Create an online cigar community.                     | As a user I would like to be able to login quickly.                                                    |
+|                                                       | As a user I would like to be able to create my own posts.                                              |
+|                                                       | As a user I would like to be able to read my own posts and other users posts.                          |
+|                                                       | As a user I would like to update my own posts.                                                         |
+|                                                       | As a user I would like to delete my own posts.                                                         |
+|                                                       | As a user I would like to have my own profile.                                                         |
+|                                                       | As a user I would like to view all my own posts on my profile.                                         |
+|                                                       | As a user I would like to upload an image with a url.                                                  |
+|                                                       | As a user I would like to have the function to search for cigar brands, vitolas and is it hand made.   |
 
-Another blue button should appear to click: *Open Browser*.
+### Scope Plane
+|     Features Included:    |            Future Feature Implementation:            |
+|:-------------------------:|:----------------------------------------------------:|
+| Navigation Bar            | User will be able to comment on posts.               |
+| User Registration         | A button to like user posts.                         |
+| Sign In/Out Functionality | Ability to upload images without the use of the url. |
+| Search Functionality      |                                                      |
+| Adding Posts              |                                                      |
+| Editing Posts             |                                                      |
+| Deleting posts            |                                                      |
+| Delete defence mechanism  |                                                      |
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Structure Plane
+The website is designed to look simple and inviting. A user can get anywhere within one click. On an initial load to the page a user is immediately on the 'All Posts' page where they can see all other users posts. Should they choose to register it is as simple as looking to the top right side of the nav bar to register. If they are a registered user it is just as simple to login. Even if a new user accidentally clicks to the login page they can still navigate quickly to the registration page by scrolling to the bottom of the page. This is also true for existing users to login.
 
-## Updates Since The Instructional Video
+Once a user is logged in they will be directed straight to their own profile page where if they have already made posts will be able to see all their own posts. Also with the ability to edit or delete straight from the 'Profile' page.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+While logged in user can easily browse through pages and can create, update and delete their own posts.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Finally a user can easily log out of their account by clicking on 'log out'.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+### Skeleton Plane
