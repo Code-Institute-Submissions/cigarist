@@ -11,16 +11,21 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+# Gets DB Name
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+# Connection to DB
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+# Secret Key
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# Creating Mongo App
 mongo = PyMongo(app)
 
 
 @app.route("/")
 @app.route("/get_cigars")
 def get_cigars():
+    # Displays all posts
     tastingNotes = mongo.db.tastingNotes.find()
     return render_template("cigar_posts.html", tastingNotes=tastingNotes)
 
@@ -28,11 +33,14 @@ def get_cigars():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    # Checks if the search returns 0
     tastingNotes_count = (
         mongo.db.tastingNotes.count_documents({"$text": {"$search": query}}))
+    # If no results flash message
     if tastingNotes_count == 0:
         flash("No Posts Found")
         return redirect(url_for("get_cigars"))
+    # Display posts is there is a result
     tastingNotes = (mongo.db.tastingNotes.find({"$text": {"$search": query}}))
     return render_template("cigar_posts.html", tastingNotes=tastingNotes)
 
