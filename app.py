@@ -54,12 +54,14 @@ def register():
 
         if existing_user:
             flash("Username already exists")
+            # Takes user back to register page
             return redirect(url_for("register"))
 
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
+        # New users added to DB
         mongo.db.users.insert_one(register)
 
         # put the new user into 'session' cookie
@@ -80,15 +82,19 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
+                    # If correct flash message
                     flash("Hello, {}".format(
                         request.form.get("username")))
+                    # Open up into users profile page
                     return redirect(url_for(
                         "profile", username=session["user"]))
             else:
+                # If user name or password in incorrect flash message
                 flash("Your Username and/or Passward is incorrect.")
                 return redirect(url_for("login"))
 
         else:
+            # If user name or password in incorrect flash message
             flash("Your Username and/or Passward is incorrect.")
             return redirect(url_for("login"))
 
@@ -97,6 +103,7 @@ def login():
 
 @app.route("/profile", methods=["GET", "POST"])
 def profile():
+    # Lists users own posts
     tastingNotes = list(
         mongo.db.tastingNotes.find({"created_by": session["user"]}))
 
@@ -110,6 +117,7 @@ def profile():
 
 @app.route("/logout")
 def logout():
+    # When user logs out
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -117,6 +125,7 @@ def logout():
 
 @app.route("/add_post", methods=["GET", "POST"])
 def add_post():
+    # User posts
     if request.method == "POST":
         tastingNotes = {
             "cigarImage": request.form.get("cigarImage"),
@@ -133,6 +142,7 @@ def add_post():
             "notes": request.form.get("notes"),
             "created_by": session["user"]
         }
+        # Added into db
         mongo.db.tastingNotes.insert_one(tastingNotes)
         flash("You Have Made A Post!")
         return redirect(url_for("add_post"))
@@ -142,6 +152,7 @@ def add_post():
 
 @app.route("/edit_post/<post_id>", methods=["GET", "POST"])
 def edit_post(post_id):
+    # Allows users to submit edits
     if request.method == "POST":
         submit = {
             "cigarImage": request.form.get("cigarImage"),
@@ -158,6 +169,7 @@ def edit_post(post_id):
             "notes": request.form.get("notes"),
             "created_by": session["user"]
         }
+        # Edited posts added to DB
         mongo.db.tastingNotes.update({"_id": ObjectId(post_id)}, submit)
         flash("Your Post is Updated!")
 
@@ -167,6 +179,7 @@ def edit_post(post_id):
 
 @app.route("/delete_post/<post_id>")
 def delete_post(post_id):
+    # Finds the correct ID and deletes post
     mongo.db.tastingNotes.remove({"_id": ObjectId(post_id)})
     flash("Your post has been removed")
     return redirect(url_for("get_cigars"))
