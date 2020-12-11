@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- H3 Heading -->
+    <!-- Start of H2 Heading -->
     <h2 class="center-align orange-text">Register Here!</h2>
+    <!-- End of H2 Heading -->
 
+    <!-- Start of Register Section -->
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
             <div class="card">
@@ -40,7 +42,9 @@
             </div>
         </form>
     </div>
+    <!-- End of Register Section -->
 
+    <!-- Start of Login Link -->
     <div class="row">
         <div class="col s12">
             <p class="center-align">
@@ -48,5 +52,6 @@
             </p>
         </div>
     </div>
+    <!-- End of Login Link -->
 
 {% endblock %}
