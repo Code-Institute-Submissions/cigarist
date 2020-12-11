@@ -30,7 +30,9 @@ h2 {
 
 /* Buttons */
 .center-btn {
+    display: flex;
     justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 10px 25px;
 }
