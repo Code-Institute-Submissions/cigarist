@@ -30,18 +30,12 @@ h2 {
 
 /* Buttons */
 .center-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     padding: 0;
     margin: 10px 25px;
 }
 
 .btn-small {
-    margin: 0 100%;
     font-family: 'Roboto', sans-serif;
 }
 
