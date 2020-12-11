@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-
+    <!-- Start of User Profile Heading with username templated in -->
     <div class="row">
         <div class="col s12 m8 offset-m2 l6 offset-l3 center-align orange-text profile">
             <h2>{{ username }}'s profile</h2>
         </div>
     </div>
-
+    <!-- End of User Profile Heading with username templated in -->
+    <!-- Start of Sub Heading -->
     <div class="row">
         <div class="col s12 m8 offset-m2 l6 offset-l3">
             <h4 class="center-align orange-text">
@@ -14,7 +15,8 @@
             </h4>
         </div>
     </div>
-
+    <!-- End of Sub Heading -->
+    <!-- Start of Users Posts Collection -->
     <div class="row">
         {% for tastingNotes in tastingNotes %}
             <div class="col s10 offset-s1">
@@ -57,5 +59,6 @@
             </div>
         {% endfor %}
   </div>
+  <!-- End of Users Posts Collection -->
 
 {% endblock %}
