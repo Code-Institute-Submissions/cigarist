@@ -2,7 +2,7 @@
 
 ---
 
-![Logo](static/images/logi.png)
+![Logo](static/images/logo.png)
 
 ---
 
