@@ -8,14 +8,41 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 
-.icon-color {
-    color: orange;
+/* Title Headings */
+h2 {
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Flashed Messages */
 .message {
     line-height: 2;
 }
 
+
+/* Profile Page */
+.profile {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Buttons */
+.center-btn {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 25px;
+}
+
+.btn-small {
+    margin: 0 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Footer */
 .footer{
     position: flex;
     bottom: 20px;
@@ -30,25 +57,6 @@ body {
     font-size: 35px;
 }
 
-.btn-small {
-    margin: 0 100%;
-    font-family: 'Roboto', sans-serif;
-}
-
-.profile {
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-family: 'Roboto', sans-serif;
-}
-
-.center-btn {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 10px 25px;
-}
-
-h2 {
-    text-decoration: underline;
-    font-family: 'Roboto', sans-serif;
+.icon-color {
+    color: orange;
 }
