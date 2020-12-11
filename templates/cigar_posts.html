@@ -5,7 +5,7 @@
     <h2 class="orange-text center-align">All Posts</h2>
     <!-- End of H2 Headers -->
 
-     <!-- Start of Seacrh Bar for Logged in Users -->
+     <!-- Start of Search Bar for Logged in Users -->
     {% if session.user %}
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
