@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block content %}    
 
+    <!-- Start of H2 Headers -->
     <h2 class="orange-text center-align">All Posts</h2>
+    <!-- End of H2 Headers -->
 
+     <!-- Start of Seacrh Bar for Logged in Users -->
     {% if session.user %}
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -19,7 +22,8 @@
         </form>
     </div>
     {% endif %}
-
+    <!-- End of Seacrh Bar for Logged in Users -->
+    <!-- Start of Post Template -->
     <div class="row">
         {% for tastingNotes in tastingNotes %}
             <div class="col s10 offset-s1">
@@ -47,7 +51,7 @@
                         {% if session.user|lower == tastingNotes.created_by|lower %}
                             <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange text-shadow waves-effect center-btn">Edit</a>
                             <a href="#delete" class="btn-small red text-shadow waves-effect modal-trigger center-btn">Delete</a>
-
+                                <!-- Start of Modal Box -->
                                 <div id="delete" class="modal">
                                     <div class="modal-content">
                                         <h4>Are you sure?</h4>
@@ -58,12 +62,13 @@
                                         <a href="{{ url_for('get_cigars') }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                                     </div>
                                 </div>
-
+                                <!-- End of Modal Box -->
                         {% endif %}
                     </div>
                 </div>
             </div>
         {% endfor %}
   </div>
+  <!-- End of Post Template -->
 
 {% endblock %}
