@@ -217,7 +217,25 @@ To work with the local copy that is created follow steps below:
 4. Create two **collections** in the database named:
 
     - **cigarNotes**
+        - **_id:**< ObjectId >
+            - **cigarImage:**< string >
+            - **cigarBrand:**< string >
+            - **vitola:**< string >
+            - **ringGauge:**< string >
+            - **handMade:**< string >
+            - **cigarStrength:**< string >
+            - **cigarDraw:**< string >
+            - **cigarFlavour:**< string >
+            - **cigarAroma:**< string >
+            - **cigarBurn:**< string >
+            - **price:**< string >
+            - **notes:**< string >
+            - **created_by:**< string >
+            
     - **users**
+        - **_id:**< ObjectId >
+            - **username:**< string >
+            - **cigarBpasswordrand:**< string >
 
 #### Step 3: Setting Up the Environment Variables
 1. Create a file called **.gitignore** in the root directory of your project.
