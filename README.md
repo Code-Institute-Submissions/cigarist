@@ -231,11 +231,11 @@ To work with the local copy that is created follow steps below:
             - **price:**< string >
             - **notes:**< string >
             - **created_by:**< string >
-            
+
     - **users**
         - **_id:**< ObjectId >
             - **username:**< string >
-            - **cigarBpasswordrand:**< string >
+            - **password:**< string >
 
 #### Step 3: Setting Up the Environment Variables
 1. Create a file called **.gitignore** in the root directory of your project.
