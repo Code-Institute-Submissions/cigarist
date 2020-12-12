@@ -176,6 +176,9 @@ than using the url of images a user can find online.
 
 ---
 
+## Testing
+For all testing results click [here](/TESTING.md)
+
 ## Deployment
 The following are steps for project deployment.
 
