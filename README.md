@@ -262,19 +262,22 @@ app.secret_key = os.environ.get("SECRET_KEY")
 ### Heroku Deployment
 To host this project on Heroku please follow the steps below:
 
-#### Step 1: Setting Up Heroku
-1. Create a Heroku account.
+#### Step 1: 
+1. Login to Heroku account.
 
-2. Create a new app and select your region.
+2. Create a new app.
+
+3. Select your region.
 
 #### Step 2: Preparing Local Workspace for Heroku
-1. In the terminal window of your local IDE type **pip3 freeze --local > requirements.txt** to create a requirements.txt file. This file is required so that Heroku knows which files needs to be installed.
+1. Create a requirements.txt file in the terminal window of your local IDE type **pip3 freeze --local > requirements.txt**. This file is required so that Heroku knows which files needs to be installed.
 
-2. In the terminal window of your local IDE type **python app.py > Procfile** to create a Procfile. This file is required so that Heroku knows which file is used as its entry point to get the app running.
+2. Create a Procfile in the terminal window of your local IDE type **python app.py > Procfile**. This file is required so that Heroku knows which file is used as its entry point to get the app running.
 
 #### Step 3: Pushing files to Heroku 
-1. In the terminal window of your local IDE type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password
-2. Commit all your files and type in the same terminal window **git push heroku master**. Now all your files are committed to Heroku
+1. In the terminal window type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password.
+
+2. Commit all your files and **push** to your repository master.
 
 #### Step 4: Setting the Configuration Variables in Heroku
 1. Go back to your Heroku account and go to **settings**
@@ -288,8 +291,9 @@ To host this project on Heroku please follow the steps below:
     - SECRET_KEY: YOURSECRETKEY
 
 #### Step 5: Open App in Heroku
-1. Click on **Open app** in the right corner of your Heroku account, the application will open in a new window
-2. The live link is available from the address bar
+1. Click on **deploy** button on the Heroku dashboard.
+
+2. Site has been deployed to Heroku.
 
 ## Disclaimer
 
