@@ -177,7 +177,101 @@ than using the url of images a user can find online.
 ---
 
 ## Deployment
+The following are steps for project deployment.
 
+### Requirements
+- Github account
+- Heroku account
+- Python (version 3.8.6)
+- MongoDB account
+
+### Cloning the Repository
+To work with a local copy of this project the following steps needs to be taken:
+
+1. Go to the main page of the GitHub repository and click on the dropdown menu **Code**
+![alt text][copy-clone]
+
+![gitclone](readme-images/gitclone.jpg)
+
+2. Copy the URL and go to your local IDE
+
+3. In the terminal of your IDE type in **git clone** and the paste the URL copied from step 2
+
+4. Press Enter and the clone will be created
+
+
+### Working with a Local Copy
+To work with the local copy that is created follow steps below:
+
+#### Step 1: Installing the Requirements
+1. To install all the required libraries of the project go to the workspace of your local copy.
+
+2. In the terminal window of your IDE type in: **pip3 install -r requirements.txt**
+
+
+#### Step 2: Creating A Collection in MongoDB
+1. Login to your MongoDB account
+
+2. Create a **database** named 'cigarist'
+
+4. Create two **collections** in the database named:
+
+    - **cigarNotes**
+    - **users**
+
+#### Step 3: Setting Up the Environment Variables
+1. Create a file called **.gitignore** in the root directory of your project.
+
+2. Add the following text in your .gitignore file: **env.py**.
+
+3. Create a file called **env.py**. This will contain all your environment variables.
+
+4. Create your own personal secret key and password. In **env.py** add the following text as seen below and replace **YOURPASSWORD**, **YOUR-CLUSTER-NAME**, **YOUR-DATABASE-NAME** and **YOURSECRETKEY**
+
+```
+import os
+
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+```
+
+#### Step 4: Run the App
+1. Open your terminal window in your IDE
+2. Type in **python3 app.py** to run the app
+
+
+### Heroku Deployment
+To host this project on Heroku please follow the steps below:
+
+#### Step 1: Setting Up Heroku
+1. Create a Heroku account.
+
+2. Create a new app and select your region.
+
+#### Step 2: Preparing Local Workspace for Heroku
+1. In the terminal window of your local IDE type **pip3 freeze --local > requirements.txt** to create a requirements.txt file. This file is required so that Heroku knows which files needs to be installed.
+
+2. In the terminal window of your local IDE type **python app.py > Procfile** to create a Procfile. This file is required so that Heroku knows which file is used as its entry point to get the app running.
+
+#### Step 3: Pushing files to Heroku 
+1. In the terminal window of your local IDE type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password
+2. Commit all your files and type in the same terminal window **git push heroku master**. Now all your files are committed to Heroku
+
+#### Step 4: Setting the Configuration Variables in Heroku
+1. Go back to your Heroku account and go to **settings**
+2. Click on **Reveal Config Vars** to reveal the keys and the values
+3. Set the keys and values as follow:
+    (**KEY: VALUE**)
+    - IP: 0.0.0.0
+    - PORT: 5000
+    - MONGO_DBNAME: YOUR-DATABASE-NAME
+    - MONGO_URI: mongodb+srv://root:**YOURPASSWORD**@**YOUR-CLUSTER-NAME**.2qobt.mongodb.net/**YOUR-DATABASE-NAME**?retryWrites=true&w=majority
+    - SECRET_KEY: YOURSECRETKEY
+
+#### Step 5: Open App in Heroku
+1. Click on **Open app** in the right corner of your Heroku account, the application will open in a new window
+2. The live link is available from the address bar
 
 ## Disclaimer
 
