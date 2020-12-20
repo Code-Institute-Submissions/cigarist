@@ -106,7 +106,7 @@ def profile():
     # Lists users own posts
     tastingNotes = list(
         mongo.db.tastingNotes.find({"created_by": session["user"]}))
-
+    # stops users from getting on to other users profile
     if session["user"]:
         return render_template(
             "profile.html", username=session["user"],
