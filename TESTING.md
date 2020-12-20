@@ -60,11 +60,12 @@ and when pressed loads the mobile side nav.
 #### add_post.html
 
 #### cigar_posts.html
-This page is the main page a user lands on when logged in. The user posts loads up as expected and is neatly stacked
-one on top of another on all screen sizes. The user that is logged in can see the 'Edit' and 'Delete' buttons on 
-their own posts, but other user posts do not display the buttons. The search bar works well. On testing it searches
-for all the categories I have set which are cigar brand name, vitola and wheter or not the cigar is hand made. These
-were the only search categories added because I felt that a user will be more likely to search on those key terms.
+This page is the main page a user lands on when logged in or as a new user. The user posts loads up as expected and 
+is neatly stacked one on top of another on all screen sizes. The user that is logged in can see the 'Edit' and 
+'Delete' buttons on their own posts, but other user posts do not display the buttons. The search bar works well. On 
+testing it searches for all the categories I have set which are cigar brand name, vitola and wheter or not the 
+cigar is hand made. These were the only search categories added because I felt that a user will be more likely to 
+search on those key terms.
 
 #### edit_posts.html
 
