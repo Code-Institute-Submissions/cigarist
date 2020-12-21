@@ -1,40 +1,16 @@
 ## Testing
 
 ### HTML5
-All the HTML code was ran through [W3C Markup Validator](https://validator.w3.org/). 
-    - base.html: 
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
-    
-    - add_post.html:
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
-
-    - cigar_posts.html:
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
-
-    - edit_post.html:
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
-
-    - login.html:
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
-
-    - profile.html:
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
-
-    - register.html:
-        - There were a lot of errors but this is due to Python and Jinja being used to inject code to other pages.
-        These errors are not able to be corrected.
+All the HTML code was ran through [W3C Markup Validator](https://validator.w3.org/). Due to using Jinja templating
+I had to test the HTML code by going to each individual page and right clicking on the page to 'View Page Source' on
+Google Chrome before running my code in the html validator. As Python code is injected into the website the HTML
+validator does not recognise this and throws up errors for a lot of the code. However, when I view the HTML code 
+through 'View Page Source' all earlier errors disappear and I have no errors or faults in any of my pages.
 
 ---
 
 ### CSS
-The style sheet was validated on [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
-    -style.css
+The style.css file was validated on [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) with no errors.
 
 ---
 
@@ -58,6 +34,7 @@ is also clickable and returns the user back to the intended page. When on smalle
 and when pressed loads the mobile side nav.
 
 #### add_post.html
+
 
 #### cigar_posts.html
 This page is the main page a user lands on when logged in or as a new user. The user posts loads up as expected and 
