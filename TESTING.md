@@ -65,7 +65,7 @@ When logging in a user must input a username and a password they have on our dat
 registered or inputs an incorrect username or password, then a message will flash up at the top of the page to let
 the user know this. However if correctly logged in a user is taken to their own profile page. 
 There is also a register link at the bottom of the login page. This can be used if a none registered user lands
-accidentally on the login and gives the user a chance to login and upload their own reviews.
+accidentally on the login page and gives the user a chance to login and upload their own reviews.
 
 #### profile.html
 When a user succesfully logs in they are navigated to their own profile page. A user will know it is their own 
@@ -76,7 +76,10 @@ the welcome message displaying.
 
 #### register.html
 Registering to cigarist is simple and easy. A user will only need to choose a unique username and password to
-register. If they choose a username that already exists then a message will flah up at the top of the page 
+register. If they choose a username that already exists then a message will flash up at the top of the page and
+the user will know to choose a new username.
+There is also a login link at the bottom of the register page. This can be used if a registered user lands
+accidentally on the register page and gives the user a chance to quickly get to the login page.
 
 #### Social Media Icons
 The three social media icons were tested by clicking on each icon. When pressed a new page is opened up and takes
