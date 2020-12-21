@@ -31,10 +31,18 @@ The responsiveness of this website was tested using [Am I Responsive](http://ami
 #### Navbar / Mobile Side Nav
 The navbar and mobile side nav was tested. All links are clickable and land on to the correct pages. The Title 
 is also clickable and returns the user back to the intended page. When on smaller screen sizes the bars icon appears
-and when pressed loads the mobile side nav.
+and when pressed loads the mobile side nav. Before login all a user will see is 'Posts', 'Login' and 'Register' 
+headings. When a user is registered or logged in the headings will change to 'Posts', 'Profile', 'Add Post' and 
+'Logout'. This functionality was tested by first using the site as a user and then signing in as a user. It works
+well and I have tested this with multiple users.
 
 #### add_post.html
-
+On the add post page is where a user can upload their own reviews of the cigar. Every field within this section 
+is required to be completed or the user cannot continue. When the field is completed with the minimum character 
+count the field highlights green. If the field has not been filled or completed properly then the field will 
+highlight red. This will help the user understand visually what is requiring a fix and what fields are correctly
+completed. I tested this section by completing each field correct;y and with the minimum character count and also
+the opposite to verify all fields react the way it was intended.
 
 #### cigar_posts.html
 This page is the main page a user lands on when logged in or as a new user. The user posts loads up as expected and 
@@ -45,6 +53,12 @@ cigar is hand made. These were the only search categories added because I felt t
 search on those key terms.
 
 #### edit_posts.html
+This page is very simialr to the add a post page. When the user clicks into edit their own post it they will be 
+redirected to the edit post page where the user will see an already populated page with the current information
+to view. This is so that the user will see exactly what they intend on editing. This was tested by logging into a
+user profile and clicking the edit button and being taken to the page. On loading of the page all information on 
+the current post is displayed. I then changed different parts of the post and update the post. Once changed I can
+go to the posts page to see my changes or my profile page.
 
 #### login.html
 
