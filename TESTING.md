@@ -103,13 +103,13 @@ the user to the intended social media platform.
 
 |    Device    | Good | Bad |
 |:------------:|:----:|:---:|
-|   Galaxy S5  |     |     |
-|    Pixel 2   |     |     |
-|  iPhone 5/SE |     |     |
-| iPhone 6/7/8 |     |     |
-|   iPhone X   |     |     |
-|     iPad     |     |     |
-|   iPad Pro   |     |     |
-|  Surface Duo |     |     |
+|   Galaxy S5  |   X  |     |
+|    Pixel 2   |   X  |     |
+|  iPhone 5/SE |   X  |     |
+| iPhone 6/7/8 |   X  |     |
+|   iPhone X   |   X  |     |
+|     iPad     |   X  |     |
+|   iPad Pro   |   X  |     |
+|  Surface Duo |   X  |     |
 
 ---
