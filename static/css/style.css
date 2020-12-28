@@ -41,6 +41,10 @@ h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+.btn-margin {
+    margin-bottom: 5px;
+}
+
 
 /* Footer */
 .footer{
