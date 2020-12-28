@@ -173,6 +173,40 @@ the user to the intended social media platform.
     - The search bar is always located on the main page for users to search for more specific posts. Users can search
     by cigar brands, vitolas or whether or not it is hand made.
 
+---
+
+## Bugs
+
+1. On building the app the first bug I came across was linking the database to the cigar post page. 
+    - This was fixed with correcting the app.py file. I had to render the correct page because I had named the view
+    one thing and the page another I had gotten myself mixed up. But once I recognised the problem I managed to fix
+    this right away.
+
+2. At the start of this project I wanted to use the icons provided in materialize which are icons from Google icons.
+    - I had to replace Google icons with Fontawesome icons. This was because there is a shortage of icons from
+    Google and made it very hard to work with. Therefore changing to Fontawesome was the best way forward.
+
+3. There was an import issue from Flask.
+    - Flask was not importing the unique usernames onto the page. I had forgotten to import the 'Import' function.
+    As soon as I imported the function all usernames were displaying properly.
+
+4. Images not rendering properly on all posts page.
+    - When displaying the url images they were coming in to all different sizes. I started with a hard coded sizes
+    which would only work some of the time. However Materialize has a repsonsive image class which fixed my problem.
+
+5. The search functionalty was not displaying the proper searches.
+    - The problem here was the same as my first bug problem. I did not stick with the correct naming conventions.
+    This led to me being confused and the search did not display as expected.
+
+6. Deleting a user post was not deleting the intended post but the very first post the user had.
+    - As I was using the modal box as an added layer for defensive programming I had forgotten to include the unique
+    ._id names into the modal. So all it was doing was deleting the posts in order rather than deleting the selected
+    post. Since adding the unique id's I am now able to delete the appropriate posts.
+
+---
+
+
+
 
 
 
