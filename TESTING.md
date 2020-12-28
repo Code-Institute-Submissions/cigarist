@@ -113,3 +113,66 @@ the user to the intended social media platform.
 |  Surface Duo |   X  |     |
 
 ---
+
+## Testing User Stories
+
+1. As a user I would like to be able to see the site without registering.
+    - As soon as a user lands on the main page you will be able to see all users posts. Even if the current user
+    has not been logged in or registered. This allows new users to decide if they would like to join the site or not.
+
+2. As a user I would like to register quickly and easily.
+    - A new user simply needs to navigate to the register page choose a username and password and sign up. However 
+    if the user chooses a username already being used they will be told with a message at the top of their screen
+    that the username is taken. The user will need to then choose a new username.
+
+3. As a user who is not registered I would like to be able to navigate quickly to the registration page. 
+    - When a new user lands onto the site they will be able to see the word 'Register' at the top right corner on 
+    desktop and tablet view and on mobile view to simply click the bars icon and the 'Register' tab is very clear 
+    at the bottom. Once clicked the user is navigated straight to the register page.
+
+4. As a user I would like to be able to login quickly.
+    - Registred users can login quickly by landing on the main page and selecting login which is at the top. When 
+    clicked the user is taken to a simple login page that authorises the login details and takes the user direct to
+    their profile page.
+
+5. As a user I would like to be able to create my own posts. 
+    - A registered user can easily create their own posts. Once logged in they can go to the add post tab where they 
+    can input all the cigar details for their post as well as add an image url to show the cigar they are posting
+    about.
+
+6. As a user I would like to be able to read my own posts and other users posts. 
+    - All registered users can read all their own posts as well as other users posts. Users will be able to know it 
+    is their own posts because they will see buttons which give the user the option to edit a post of delete the post.
+    However if it is not their own posts they will not be given theses options.
+
+7. As a user I would like to update my own posts.  
+    - Users who are registered can update their posts. All users own posts can see an edit button either on the main page
+    or on their own profile page. With a click of the button the user will navigate to the edit post page where it
+    will be populated with all the information of the post and the user can decide what needs to be changed and reposted
+    afterwards.
+
+8. As a user I would like to delete my own posts.
+    - Users are able to delete their own posts if they do not want it to remain on the site. Every post a user puts 
+    up will have a delete button. The delete button has defensive progamming built in so that the user does not delete
+    a post by accident. When the button is pressed a javascript modal box pops up and will ask the user if they 
+    would really like to delete the post. There are two footer buttons which will allow the user to choose to delete or
+    cancel the deletion. There is an additional action where a user can simply click outside the modal box that also
+    cancels out the deletion.
+
+9. As a user I would like to have my own profile.
+    - User who have registered are given personal profile pages. Here they can access all their own posts. They have 
+    the options to edit posts and choose to delete them as well.
+
+10. As a user I would like to view all my own posts on my profile. 
+    - Users on their own profile page will be shown all posts they have created.
+
+11. As a user I would like to upload an image with a url.
+    - All users can uplaod their own images to their post by inserting the image url to show other users the cigar.
+
+12. As a user I would like to have the function to search for cigar brands, vitolas and is it hand made. 
+    - The search bar is always located on the main page for users to search for more specific posts. Users can search
+    by cigar brands, vitolas or whether or not it is hand made.
+
+
+
+
