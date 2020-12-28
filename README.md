@@ -35,7 +35,7 @@ To develop this website we have broken down the UX into its five planes to defin
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | To create a site for users to post and review cigars. | As a user I would like to be able to see the site without registering.                                 |
 | A site that allows users to discover new cigars.      | As a user I would like to register quickly and easily.                                                 |
-| To have a simple and easy site for users to navigate. | As a user who is not registered I would like to be able to navigate  quickly to the registration page. |
+| To have a simple and easy site for users to navigate. | As a user who is not registered I would like to be able to navigate quickly to the registration page.  |
 | Create an online cigar community.                     | As a user I would like to be able to login quickly.                                                    |
 |                                                       | As a user I would like to be able to create my own posts.                                              |
 |                                                       | As a user I would like to be able to read my own posts and other users posts.                          |
