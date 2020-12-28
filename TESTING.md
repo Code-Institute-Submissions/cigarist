@@ -28,6 +28,8 @@ The responsiveness of this website was tested using [Am I Responsive](http://ami
 
 ---
 
+## Pages
+
 #### Navbar / Mobile Side Nav
 The navbar and mobile side nav was tested. All links are clickable and land on to the correct pages. The Title 
 is also clickable and returns the user back to the intended page. When on smaller screen sizes the bars icon appears
@@ -73,7 +75,6 @@ profile because they will have a welcome message with their own username in the 
 has ever posted will be displayed on their profile page. If the user has never posted it will remain blank with only
 the welcome message displaying.
 
-
 #### register.html
 Registering to cigarist is simple and easy. A user will only need to choose a unique username and password to
 register. If they choose a username that already exists then a message will flash up at the top of the page and
@@ -91,12 +92,12 @@ the user to the intended social media platform.
 
 |      Browser      | Good | Bad |
 |:-----------------:|:----:|:---:|
-|   Google Chrome   |      |     |
-|      Firefox      |      |     |
-|       Opera       |      |     |
-|       Safari      |      |     |
-|        Edge       |      |     |
-| Internet Explorer |      |     |
+|   Google Chrome   |   X  |     |
+|      Firefox      |   X  |     |
+|       Opera       |   X  |     |
+|       Safari      |   X  |     |
+|        Edge       |   X  |     |
+| Internet Explorer |   X  |     |
 
 ### Device Test
 
