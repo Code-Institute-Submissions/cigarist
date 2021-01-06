@@ -193,6 +193,42 @@ The following are steps for project deployment.
 - Python (version 3.8.6)
 - MongoDB account
 
+### Heroku Deployment
+To host this project on Heroku please follow the steps below:
+
+#### Step 1: 
+1. Login to Heroku account.
+
+2. Create a new app.
+
+3. Select your region.
+
+#### Step 2: Preparing Local Workspace for Heroku
+1. Create a requirements.txt file in the terminal window of your local IDE type **pip3 freeze --local > requirements.txt**. This file is required so that Heroku knows which files needs to be installed.
+
+2. Create a Procfile in the terminal window of your local IDE type **python app.py > Procfile**. This file is required so that Heroku knows which file is used as its entry point to get the app running.
+
+#### Step 3: Pushing files to Heroku 
+1. In the terminal window type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password.
+
+2. Commit all your files and **push** to your repository master.
+
+#### Step 4: Setting the Configuration Variables in Heroku
+1. Go back to your Heroku account and go to **settings**
+2. Click on **Reveal Config Vars** to reveal the keys and the values
+3. Set the keys and values as follow:
+    (**KEY: VALUE**)
+    - IP: 0.0.0.0
+    - PORT: 5000
+    - MONGO_DBNAME: YOUR-DATABASE-NAME
+    - MONGO_URI: mongodb+srv://root:**YOURPASSWORD**@**YOUR-CLUSTER-NAME**.2qobt.mongodb.net/**YOUR-DATABASE-NAME**?retryWrites=true&w=majority
+    - SECRET_KEY: YOURSECRETKEY
+
+#### Step 5: Open App in Heroku
+1. Click on **deploy** button on the Heroku dashboard.
+
+2. Site has been deployed to Heroku.
+
 ### Cloning the Repository
 To work with a local copy of this project the following steps needs to be taken:
 
@@ -266,42 +302,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 1. Open your terminal window in your IDE
 2. Type in **python3 app.py** to run the app
 
+---
 
-### Heroku Deployment
-To host this project on Heroku please follow the steps below:
+## Acknowledgements
+1. I would like to thank all [Code Institute](https://codeinstitute.net/) tutors for all their support and help towards my project.
+2. Thank you to all my friends and family who have helped encourage me and test my project.
+3. [Precious Ijege](https://github.com/precious-ijege), my mentor, for all the help and guidance towards my third milestone project.
 
-#### Step 1: 
-1. Login to Heroku account.
-
-2. Create a new app.
-
-3. Select your region.
-
-#### Step 2: Preparing Local Workspace for Heroku
-1. Create a requirements.txt file in the terminal window of your local IDE type **pip3 freeze --local > requirements.txt**. This file is required so that Heroku knows which files needs to be installed.
-
-2. Create a Procfile in the terminal window of your local IDE type **python app.py > Procfile**. This file is required so that Heroku knows which file is used as its entry point to get the app running.
-
-#### Step 3: Pushing files to Heroku 
-1. In the terminal window type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password.
-
-2. Commit all your files and **push** to your repository master.
-
-#### Step 4: Setting the Configuration Variables in Heroku
-1. Go back to your Heroku account and go to **settings**
-2. Click on **Reveal Config Vars** to reveal the keys and the values
-3. Set the keys and values as follow:
-    (**KEY: VALUE**)
-    - IP: 0.0.0.0
-    - PORT: 5000
-    - MONGO_DBNAME: YOUR-DATABASE-NAME
-    - MONGO_URI: mongodb+srv://root:**YOURPASSWORD**@**YOUR-CLUSTER-NAME**.2qobt.mongodb.net/**YOUR-DATABASE-NAME**?retryWrites=true&w=majority
-    - SECRET_KEY: YOURSECRETKEY
-
-#### Step 5: Open App in Heroku
-1. Click on **deploy** button on the Heroku dashboard.
-
-2. Site has been deployed to Heroku.
+---
 
 ## Disclaimer
 
