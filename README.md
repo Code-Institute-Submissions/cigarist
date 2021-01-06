@@ -21,8 +21,12 @@
 - [Credits](#credits)
 - [Disclaimer](#disclaimer)
 
-Cigarist is a cigar post and review site. Users can create their own post with reviews, read their own or other user posts, update their own posts and reviews and delete their own posts.
-As a cigar enthusiast myself I often wonder if other people get the same flavours and aromas as I do or if they can get a completely different profile. This app was created to track what cigars I have tried and also to see other users reviews on cigars I may want to try in the future. On top of all that it allows me to test my theory on flavour profiles against other users flavour profiles. The website can be seen [here](https://cigarist.herokuapp.com/).
+Cigarist is a cigar post and review site. Users can create their own post with reviews, read their own or other user 
+posts, update their own posts and reviews and delete their own posts.
+As a cigar enthusiast myself I often wonder if other people get the same flavours and aromas as I do or if they can 
+get a completely different profile. This app was created to track what cigars I have tried and also to see other users 
+reviews on cigars I may want to try in the future. On top of all that it allows me to test my theory on flavour 
+profiles against other users flavour profiles. The website can be seen [here](https://cigarist.herokuapp.com/).
 
 ---
 
@@ -35,7 +39,7 @@ To develop this website we have broken down the UX into its five planes to defin
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | To create a site for users to post and review cigars. | As a user I would like to be able to see the site without registering.                                 |
 | A site that allows users to discover new cigars.      | As a user I would like to register quickly and easily.                                                 |
-| To have a simple and easy site for users to navigate. | As a user who is not registered I would like to be able to navigate quickly to the registration page.  |
+| To have a simple and easy site for users to navigate. | As a user who is not registered I would like to be able to navigate easily through the site.           |
 | Create an online cigar community.                     | As a user I would like to be able to login quickly.                                                    |
 |                                                       | As a user I would like to be able to create my own posts.                                              |
 |                                                       | As a user I would like to be able to read my own posts and other users posts.                          |
@@ -45,6 +49,7 @@ To develop this website we have broken down the UX into its five planes to defin
 |                                                       | As a user I would like to view all my own posts on my profile.                                         |
 |                                                       | As a user I would like to upload an image with a url.                                                  |
 |                                                       | As a user I would like to have the function to search for cigar brands, vitolas and is it hand made.   |
+|                                                       | As a user I would like to see social media links on the site for easy access.                          |
 
 ### Scope Plane
 |     Features Included:    |            Future Feature Implementation:            |
@@ -68,7 +73,7 @@ While logged in user can easily browse through pages and can create, update and 
 Finally a user can easily log out of their account by clicking on 'log out'.
 
 ### Skeleton Plane
-The project wireframes were created with Balsamiq. We have created 3 versions of the website on different viewing 
+The project wireframes were created with [Balsamiq](https://balsamiq.com/). We have created 3 versions of the website on different viewing 
 platforms. Desktop, mobile and tablet view to show the client how the website will render on different devices.
 
 - [Desktop](https://github.com/jtwy23/cigarist/blob/master/mockups/desktop.pdf)
