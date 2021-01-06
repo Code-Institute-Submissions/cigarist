@@ -36,15 +36,17 @@ def search():
     # Checks if the search returns 0
     tastingNotes_count = (
         mongo.db.tastingNotes.count_documents({"$text": {"$search": query}}))
+
+    print(f"Count: {tastingNotes_count}")
     # If no results flash message
     if tastingNotes_count == 0:
         flash("No Posts Found")
         return redirect(url_for("get_cigars"))
     # Display posts is there is a result
-    tastingNotes = (mongo.db.tastingNotes.find({"$text": {"$search": query}}))
+    tastingNotes = mongo.db.tastingNotes.find({"$text": {"$search": query}})
     result = mongo.db.tastingNotes.count({"$text": {"$search": query}})
     return render_template(
-        "cigar_posts.html", tastingNotes=tastingNotes, result=result)
+        "cigar_posts.html", tastingNotes=tastingNotes, result=result, tastingNotes_count=tastingNotes_count)
 
 
 @app.route("/register", methods=["GET", "POST"])
