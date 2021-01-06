@@ -145,7 +145,7 @@ def add_post():
         # Added into db
         mongo.db.tastingNotes.insert_one(tastingNotes)
         flash("You Have Made A Post!")
-        return redirect(url_for("add_post"))
+        return redirect(url_for("profile"))
 
     return render_template("add_post.html")
 
