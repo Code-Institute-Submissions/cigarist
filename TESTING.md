@@ -20,6 +20,10 @@ Running all the jQuery code through [JSHint](https://jshint.com/) there were no 
 
 ---
 
+### Python
+
+---
+
 ## Responsive
 
 The responsiveness of this website was tested using [Am I Responsive](http://ami.responsivedesign.is/#).
@@ -90,27 +94,27 @@ the user to the intended social media platform.
 
 ### Browser Test
 
-|      Browser      | Good | Bad |
-|:-----------------:|:----:|:---:|
-|   Google Chrome   |   X  |     |
-|      Firefox      |   X  |     |
-|       Opera       |   X  |     |
-|       Safari      |   X  |     |
-|        Edge       |   X  |     |
-| Internet Explorer |   X  |     |
+|      Browser      | Responsive | Appearance | Functionality |
+|:-----------------:|:----------:|:----------:|:-------------:|
+|   Google Chrome   |     Yes    |    Good    |      Good     |
+|      Firefox      |     Yes    |    Good    |      Good     |
+|       Opera       |     Yes    |    Good    |      Good     |
+|       Safari      |     Yes    |    Good    |      Good     |
+|        Edge       |     Yes    |    Good    |      Good     |
+| Internet Explorer |     Yes    |    Good    |      Good     |
 
 ### Device Test
 
-|    Device    | Good | Bad |
-|:------------:|:----:|:---:|
-|   Galaxy S5  |   X  |     |
-|    Pixel 2   |   X  |     |
-|  iPhone 5/SE |   X  |     |
-| iPhone 6/7/8 |   X  |     |
-|   iPhone X   |   X  |     |
-|     iPad     |   X  |     |
-|   iPad Pro   |   X  |     |
-|  Surface Duo |   X  |     |
+|    Device    | Responsive | Appearance | Functionality |
+|:------------:|:----------:|:----------:|:-------------:|
+|   Galaxy S5  |     Yes    |    Good    |      Good     |
+|    Pixel 2   |     Yes    |    Good    |      Good     |
+|  iPhone 5/SE |     Yes    |    Good    |      Good     |
+| iPhone 6/7/8 |     Yes    |    Good    |      Good     |
+|   iPhone X   |     Yes    |    Good    |      Good     |
+|     iPad     |     Yes    |    Good    |      Good     |
+|   iPad Pro   |     Yes    |    Good    |      Good     |
+|  Surface Duo |     Yes    |    Good    |      Good     |
 
 ---
 

@@ -188,8 +188,8 @@ For all testing results click [here](/TESTING.md)
 The following are steps for project deployment.
 
 ### Requirements
-- Github account
 - Heroku account
+- Github account
 - Python (version 3.8.6)
 - MongoDB account
 
