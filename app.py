@@ -185,7 +185,7 @@ def delete_post(post_id):
     # Finds the correct ID and deletes post
     mongo.db.tastingNotes.remove({"_id": ObjectId(post_id)})
     flash("Your post has been removed")
-    return redirect(url_for("get_cigars"))
+    return redirect(url_for("profile"))
 
 
 if __name__ == "__main__":
