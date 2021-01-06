@@ -38,7 +38,7 @@
                 <div class="input-field col s12">
                     <i class="far fa-circle prefix icon-color"></i>
                     <input id="ringGauge" name="ringGauge" minlength="1" maxlength="5" 
-                        type="text" class="validate" required>
+                        pattern="^[0-9]{1,5}$" type="text" class="validate" required>
                     <label for="ringGauge">Ring Gauge</label>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                 <div class="input-field col s12">
                     <i class="far fa-hand-paper prefix icon-color"></i>
                     <input id="handMade" name="handMade" minlength="2" maxlength="3" 
-                        type="text" class="validate" required>
+                        pattern="^[a-zA-Z]{2,3}$" type="text" class="validate" required>
                     <label for="handMade">Handmade</label>
                 </div>
             </div>
