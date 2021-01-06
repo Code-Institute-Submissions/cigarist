@@ -21,15 +21,22 @@
             </div>
         </form>
     </div>
+
+    <div class="row valign-wrapper center-align" >
+        <div class="col s12 m12 l12">
+            Total Posts: {{tastingNote|length}}
+        </div>
+    </div>
+
     {% endif %}
     <!-- End of Seacrh Bar for Logged in Users -->
     <!-- Start of Post Template -->
     <div class="row">
         {% for tastingNotes in tastingNotes %}
-            <div class="col s10 offset-s1">
+            <div class="col s12 m12 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="{{ tastingNotes.cigarImage }}" class="responsive-img" alt="User Cigar Images">
+                        <img src="{{ tastingNotes.cigarImage }}" class="my-img" alt="User Cigar Images">
                     </div>
                     <div class="card-content">
                         <p>

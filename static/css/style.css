@@ -46,6 +46,12 @@ h2 {
 }
 
 
+/* Images */
+.my-img {
+    height: 250px;
+}
+
+
 /* Footer */
 .footer{
     bottom: 20px;
