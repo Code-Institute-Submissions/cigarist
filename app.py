@@ -42,7 +42,9 @@ def search():
         return redirect(url_for("get_cigars"))
     # Display posts is there is a result
     tastingNotes = (mongo.db.tastingNotes.find({"$text": {"$search": query}}))
-    return render_template("cigar_posts.html", tastingNotes=tastingNotes)
+    result = mongo.db.tastingNotes.count({"$text": {"$search": query}})
+    return render_template(
+        "cigar_posts.html", tastingNotes=tastingNotes, result=result)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -80,14 +82,14 @@ def login():
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    # If correct flash message
-                    flash("Hello, {}".format(
-                        request.form.get("username")))
-                    # Open up into users profile page
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                # If correct flash message
+                flash("Hello, {}".format(
+                    request.form.get("username")))
+                # Open up into users profile page
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # If user name or password in incorrect flash message
                 flash("Your Username and/or Passward is incorrect.")
@@ -188,7 +190,6 @@ def delete_post(post_id):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True) 
+            port=int(os.environ.get("PORT")), debug=True)
 
 # Turn to false before project submission
