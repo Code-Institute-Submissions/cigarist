@@ -24,7 +24,7 @@
 
     <div class="row valign-wrapper center-align" >
         <div class="col s12 m12 l12">
-            Total Posts: {{tastingNote|length}}
+            Total Posts: {{result|length}}
         </div>
     </div>
 
@@ -34,7 +34,7 @@
     <div class="row">
         {% for tastingNotes in tastingNotes %}
             <div class="col s12 m12 l4">
-                <div class="card">
+                <div class="card large">
                     <div class="card-image">
                         <img src="{{ tastingNotes.cigarImage }}" class="my-img" alt="User Cigar Images">
                     </div>
@@ -56,8 +56,8 @@
                     </div>
                     <div class="card-action">
                         {% if session.user|lower == tastingNotes.created_by|lower %}
-                            <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange text-shadow waves-effect center-btn">Edit</a>
-                            <a href="#modal-{{tastingNotes._id}}" class="btn-small red text-shadow waves-effect modal-trigger center-btn">Delete</a>
+                            <a href="{{ url_for('edit_post', post_id=tastingNotes._id ) }}" class="btn-small orange text-shadow waves-effect">Edit</a>
+                            <a href="#modal-{{tastingNotes._id}}" class="btn-small red text-shadow waves-effect modal-trigger">Delete</a>
                                 <!-- Start of Modal Box -->
                                 <div id="modal-{{tastingNotes._id}}" class="modal">
                                     <div class="modal-content">
