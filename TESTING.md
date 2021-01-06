@@ -22,6 +22,8 @@ Running all the jQuery code through [JSHint](https://jshint.com/) there were no 
 
 ### Python
 
+All python code was checked on [PEP8 Online](http://pep8online.com/) where no errors were highlighted.
+
 ---
 
 ## Responsive
