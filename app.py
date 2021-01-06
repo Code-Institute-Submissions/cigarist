@@ -152,7 +152,7 @@ def add_post():
 
 @app.route("/edit_post/<post_id>", methods=["GET", "POST"])
 def edit_post(post_id):
-    # Allows users to submit edits
+    # Allows users to submit edits and populates the current edit information
     if request.method == "POST":
         submit = {
             "cigarImage": request.form.get("cigarImage"),
@@ -172,6 +172,7 @@ def edit_post(post_id):
         # Edited posts added to DB
         mongo.db.tastingNotes.update({"_id": ObjectId(post_id)}, submit)
         flash("Your Post is Updated!")
+        return redirect(url_for("profile"))
 
     tastingNotes = mongo.db.tastingNotes.find_one({"_id": ObjectId(post_id)})
     return render_template("edit_post.html", tastingNotes=tastingNotes)
