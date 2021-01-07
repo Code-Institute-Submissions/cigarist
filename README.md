@@ -50,6 +50,7 @@ To develop this website we have broken down the UX into its five planes to defin
 |                                                       | As a user I would like to upload an image with a url.                                                  |
 |                                                       | As a user I would like to have the function to search for cigar brands, vitolas and is it hand made.   |
 |                                                       | As a user I would like to see social media links on the site for easy access.                          |
+|                                                       | As a user I would like to know what the purpose of the site is for.                                    |
 
 ### Scope Plane
 |     Features Included:    |            Future Feature Implementation:            |
