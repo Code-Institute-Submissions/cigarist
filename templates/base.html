@@ -28,6 +28,7 @@
             <a href="{{ url_for('get_cigars') }}" class="brand-logo">Cigarist</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('get_cigars') }}">Posts</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -44,6 +45,7 @@
         <!-- Secondary/Mobile Nav -->
         <ul class="sidenav" id="mobile-demo">
             <li class="h4 center-align orange-text">Cigarist</li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('get_cigars') }}">Posts</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -72,7 +74,7 @@
             {% endif %}
         {% endwith %}
         <!-- End of Flash Message -->
-                </div>
+    </div>
     <!-- End of Section -->
 
     <!-- Start of Main -->

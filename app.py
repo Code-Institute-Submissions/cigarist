@@ -30,6 +30,11 @@ def get_cigars():
     return render_template("cigar_posts.html", tastingNotes=tastingNotes)
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -46,7 +51,8 @@ def search():
     tastingNotes = mongo.db.tastingNotes.find({"$text": {"$search": query}})
     result = mongo.db.tastingNotes.count({"$text": {"$search": query}})
     return render_template(
-        "cigar_posts.html", tastingNotes=tastingNotes, result=result, tastingNotes_count=tastingNotes_count)
+        "cigar_posts.html", tastingNotes=tastingNotes,
+        result=result, tastingNotes_count=tastingNotes_count)
 
 
 @app.route("/register", methods=["GET", "POST"])
