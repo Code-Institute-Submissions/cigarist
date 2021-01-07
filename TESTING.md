@@ -38,11 +38,17 @@ The responsiveness of this website was tested using [Am I Responsive](http://ami
 
 #### Navbar / Mobile Side Nav
 The navbar and mobile side nav was tested. All links are clickable and land on to the correct pages. The Title 
-is also clickable and returns the user back to the intended page. When on smaller screen sizes the bars icon appears
+is also clickable and returns the user back to the intended page of home. On smaller screen sizes the bars icon appears
 and when pressed loads the mobile side nav. Before login all a user will see is 'Posts', 'Login' and 'Register' 
 headings. When a user is registered or logged in the headings will change to 'Posts', 'Profile', 'Add Post' and 
 'Logout'. This functionality was tested by first using the site as a user and then signing in as a user. It works
 well and I have tested this with multiple users.
+
+#### about.html
+The page loads as expected and the carousel displays all images properly. There are two links at the bottom of the 
+card. If the user is new they have the option to click register which does take the user to the register page. Or if
+the user has already registered then they can simply click login and be taken to their profile page after successfully
+logging in.
 
 #### add_post.html
 On the add post page is where a user can upload their own reviews of the cigar. Every field within this section 
@@ -179,6 +185,11 @@ the user to the intended social media platform.
     - The search bar is always located on the main page for users to search for more specific posts. Users can search
     by cigar brands, vitolas or whether or not it is hand made.
 
+13. As a user I would like to know what the purpose of the site is for. 
+    - The about.html page gives users a brief description of what the purpose of the website is and some short
+    instructions on how to register, login and add posts.
+
+
 ---
 
 ## Bugs
@@ -208,6 +219,15 @@ the user to the intended social media platform.
     - As I was using the modal box as an added layer for defensive programming I had forgotten to include the unique
     ._id names into the modal. So all it was doing was deleting the posts in order rather than deleting the selected
     post. Since adding the unique id's I am now able to delete the appropriate posts.
+
+7. When I was changing the look of the home page from stacked posts to a three in a row display of posts I ran into
+a problem with the main text. Some was displayed and the rest were sitting behind the buttons.
+    - This was rectified by using overflow-y: auto !important. The text was much better contained and a user can 
+    now scroll through the text to see what was posted.
+
+8. The edit and delete buttons were originally stacked to stay inline with the stacked design. However the buttons 
+were cause problems with displaying more text.
+    - I made the buttons inline so that more text can be shown.
 
 ---
 
