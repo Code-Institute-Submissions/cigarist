@@ -3,4 +3,5 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     // Modal Box for Deleting a Post
     $('.modal').modal();
+    $('.carousel').carousel();
   });
