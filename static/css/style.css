@@ -66,6 +66,8 @@ h2 {
     color: orange;
 }
 
+
+/* Card for user posts */
 .card-content {
     overflow-y: auto !important;
 }
