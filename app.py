@@ -113,16 +113,18 @@ def login():
 
 @app.route("/profile", methods=["GET", "POST"])
 def profile():
-    # Lists users own posts
-    tastingNotes = list(
-        mongo.db.tastingNotes.find({"created_by": session["user"]}))
     # stops users from getting on to other users profile
-    if session["user"]:
-        return render_template(
-            "profile.html", username=session["user"],
-            tastingNotes=tastingNotes)
-
-    return redirect(url_for("login"))
+    try:
+        if session["user"]:
+            # Lists users own posts
+            tastingNotes = list(
+                mongo.db.tastingNotes.find({"created_by": session["user"]}))
+            return render_template(
+                "profile.html", username=session["user"],
+                tastingNotes=tastingNotes)
+    except:
+        flash("You must login to view your profile!")
+        return redirect(url_for("login"))
 
 
 @app.route("/logout")
@@ -135,29 +137,33 @@ def logout():
 
 @app.route("/add_post", methods=["GET", "POST"])
 def add_post():
-    # User posts
-    if request.method == "POST":
-        tastingNotes = {
-            "cigarImage": request.form.get("cigarImage"),
-            "cigarBrand": request.form.get("cigarBrand"),
-            "vitola": request.form.get("vitola"),
-            "ringGauge": request.form.get("ringGauge"),
-            "handMade": request.form.get("handMade"),
-            "cigarStrength": request.form.get("cigarStrength"),
-            "cigarDraw": request.form.get("cigarDraw"),
-            "cigarFlavour": request.form.get("cigarFlavour"),
-            "cigarAroma": request.form.get("cigarAroma"),
-            "cigarBurn": request.form.get("cigarBurn"),
-            "price": request.form.get("price"),
-            "notes": request.form.get("notes"),
-            "created_by": session["user"]
-        }
-        # Added into db
-        mongo.db.tastingNotes.insert_one(tastingNotes)
-        flash("You Have Made A Post!")
-        return redirect(url_for("profile"))
+    try:
+        # User posts
+        if request.method == "POST":
+            tastingNotes = {
+                "cigarImage": request.form.get("cigarImage"),
+                "cigarBrand": request.form.get("cigarBrand"),
+                "vitola": request.form.get("vitola"),
+                "ringGauge": request.form.get("ringGauge"),
+                "handMade": request.form.get("handMade"),
+                "cigarStrength": request.form.get("cigarStrength"),
+                "cigarDraw": request.form.get("cigarDraw"),
+                "cigarFlavour": request.form.get("cigarFlavour"),
+                "cigarAroma": request.form.get("cigarAroma"),
+                "cigarBurn": request.form.get("cigarBurn"),
+                "price": request.form.get("price"),
+                "notes": request.form.get("notes"),
+                "created_by": session["user"]
+            }
+            # Added into db
+            mongo.db.tastingNotes.insert_one(tastingNotes)
+            flash("You Have Made A Post!")
+            return redirect(url_for("profile"))
 
-    return render_template("add_post.html")
+        return render_template("add_post.html")
+    except:
+        flash("You must login to post!")
+        return redirect(url_for("login"))
 
 
 @app.route("/edit_post/<post_id>", methods=["GET", "POST"])
@@ -184,7 +190,8 @@ def edit_post(post_id):
         flash("Your Post is Updated!")
         return redirect(url_for("profile"))
 
-    tastingNotes = mongo.db.tastingNotes.find_one({"_id": ObjectId(post_id)})
+    tastingNotes = mongo.db.tastingNotes.find_one(
+        {"_id": ObjectId(post_id)})
     return render_template("edit_post.html", tastingNotes=tastingNotes)
 
 
