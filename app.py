@@ -47,7 +47,7 @@ def search():
     if tastingNotes_count == 0:
         flash("No Posts Found")
         return redirect(url_for("get_cigars"))
-    # Display posts is there is a result
+    # Display posts if there is a result
     tastingNotes = mongo.db.tastingNotes.find({"$text": {"$search": query}})
     result = mongo.db.tastingNotes.count({"$text": {"$search": query}})
     return render_template(
