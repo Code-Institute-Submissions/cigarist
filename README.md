@@ -125,6 +125,8 @@ devices and screen sizes.
 -	A button for users to like or favourite any posts they see and like.
 -   The ability to be able to upload an image from any device that stores users images locally to the site. Rather 
 than using the url of images a user can find online.
+-   Currently I have a general except in my Python code that allows users to redirect to the login page. However,
+in the future I would like to implement more specific excepts to the project.
 
 ---
 
