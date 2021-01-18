@@ -30,7 +30,7 @@ All python code was checked on [PEP8 Online](http://pep8online.com/) where no er
 
 The responsiveness of this website was tested using [Am I Responsive](http://ami.responsivedesign.is/#).
 
-![amiresponsive img](readme-images/amiresponsive.jpg)
+![amiresponsive img](readme-images/amiresponsive01.jpg)
 
 To make sure that the site is responsive on all popular screen sizes. I ran it through 
 [Am I Responsive](http://ami.responsivedesign.is/#) to check that it would look well in many different screen
