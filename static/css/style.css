@@ -71,3 +71,10 @@ h2 {
 .card-content {
     overflow-y: auto !important;
 }
+
+
+@media (max-width:800px) {
+    .carousel {
+        display:none !important;
+    }
+}
