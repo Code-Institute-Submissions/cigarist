@@ -48,7 +48,10 @@
                                 <div id="modal-{{tastingNotes._id}}" class="modal">
                                     <div class="modal-content">
                                         <h4>Are you sure?</h4>
-                                        <p>In case you do not want to delete your post please click the 'Cancel' button or simply click outside of this box.</p>
+                                        <p>
+                                            In case you do not want to delete your post please click the 'Cancel' button to take you back to the post page 
+                                            or simply click outside of this box to remain on the edit page.
+                                        </p>
                                     </div>
                                     <div class="modal-footer">
                                         <a href="{{ url_for('delete_post', post_id=tastingNotes._id) }}" class="modal-close waves-effect waves-green btn-flat red-text">Delete</a>
