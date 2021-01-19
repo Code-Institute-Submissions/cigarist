@@ -73,6 +73,21 @@ h2 {
 }
 
 
+/* 404 Error */
+.error {
+    text-align: center;
+    font-weight: 700;
+}
+
+.error h3 {
+    padding: 3rem 0;
+}
+
+.error p {
+    padding: 3rem 0;
+}
+
+
 @media (max-width:800px) {
     .carousel {
         display:none !important;

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Start of H2 Heading -->
+    <h2 class="center-align orange-text">OOPS!</h2>
+    <!-- End of H2 Heading -->
+
+    <div class="error">
+        <h3>404 - PAGE NOT FOUND</h3>
+        <p>
+            Sorry, the page you requested could not be found.
+        </p>
+        <a href="{{ url_for('get_cigars') }}" class="orange-text lighten-1">Return to Homepage</a>
+    </div>
+{% endblock %}
