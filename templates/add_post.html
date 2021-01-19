@@ -19,8 +19,8 @@
             <div class="row" >
                 <div class="input-field col s12">
                     <i class="fas fa-joint prefix icon-color"></i>
-                    <input id="cigarBrand" name="cigarBrand" minlength="3" maxlength="25" 
-                        type="text" class="validate" required>
+                    <input id="cigarBrand" name="cigarBrand" minlength="3" maxlength="50" 
+                        pattern="^[a-zA-Z0-9]{3,50}$" type="text" class="validate" required>
                     <label for="cigarBrand">Cigar Brand</label>
                 </div>
             </div> 
@@ -29,16 +29,37 @@
                 <div class="input-field col s12">
                     <i class="fas fa-window-minimize prefix icon-color"></i>
                     <input id="vitola" name="vitola" minlength="3" maxlength="25" 
-                        type="text" class="validate" required>
-                    <label for="vitola">Vitola</label>
+                        pattern="^[a-zA-Z0-9]{3,25}$" type="text" class="validate" required>
+                    <label for="vitola">Vitola (Cigar shape)</label>
                 </div>
             </div>
             <!-- Ring Gauge Section -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="far fa-circle prefix icon-color"></i>
-                    <input id="ringGauge" name="ringGauge" minlength="1" maxlength="5" 
-                        pattern="^[0-9]{1,5}$" type="text" class="validate" required>
+                    <select name="ringGauge" id="ringGauge" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="28">28 Ring Gauge</option>
+                        <option value="30">30 Ring Gauge</option>
+                        <option value="32">32 Ring Gauge</option>
+                        <option value="34">34 Ring Gauge</option>
+                        <option value="36">36 Ring Gauge</option>
+                        <option value="38">38 Ring Gauge</option>
+                        <option value="40">40 Ring Gauge</option>
+                        <option value="42">42 Ring Gauge</option>
+                        <option value="44">44 Ring Gauge</option>
+                        <option value="46">46 Ring Gauge</option>
+                        <option value="48">48 Ring Gauge</option>
+                        <option value="50">50 Ring Gauge</option>
+                        <option value="52">52 Ring Gauge</option>
+                        <option value="54">54 Ring Gauge</option>
+                        <option value="56">56 Ring Gauge</option>
+                        <option value="58">58 Ring Gauge</option>
+                        <option value="60">60 Ring Gauge</option>
+                        <option value="62">62 Ring Gauge</option>
+                        <option value="64">64 Ring Gauge</option>
+                        <option value="64+">64+ Ring Gauge</option>
+                    </select>
                     <label for="ringGauge">Ring Gauge</label>
                 </div>
             </div>
@@ -46,8 +67,11 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="far fa-hand-paper prefix icon-color"></i>
-                    <input id="handMade" name="handMade" minlength="2" maxlength="3" 
-                        pattern="^[a-zA-Z]{2,3}$" type="text" class="validate" required>
+                    <select name="handMade" id="handMade" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                     <label for="handMade">Handmade</label>
                 </div>
             </div>
@@ -55,8 +79,12 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-dumbbell prefix icon-color"></i>
-                    <input id="cigarStrength" name="cigarStrength" minlength="3" maxlength="50" 
-                        type="text" class="validate" required>
+                    <select name="cigarStrength" id="cigarStrength" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="mild">Mild</option>
+                        <option value="medium">Medium</option>
+                        <option value="full">Full</option>
+                    </select>
                     <label for="cigarStrength">Strength</label>
                 </div>
             </div>
@@ -64,8 +92,12 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-lungs prefix icon-color"></i>
-                    <input id="cigarDraw" name="cigarDraw" minlength="5" maxlength="100" 
-                        type="text" class="validate" required>
+                    <select name="cigarDraw" id="cigarDraw" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="easy">Easy</option>
+                        <option value="normal">Normal</option>
+                        <option value="hard">Hard</option>
+                    </select>
                     <label for="cigarDraw">Draw</label>
                 </div>
             </div>
@@ -73,8 +105,15 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-bacon prefix icon-color"></i>
-                    <input id="cigarFlavour" name="cigarFlavour" minlength="5" maxlength="200" 
-                        type="text" class="validate" required>
+                    <select name="cigarFlavour" id="cigarFlavour" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="coffeenotes">Coffee Notes</option>
+                        <option value="herbspicenotes">Herb & Spice Notes</option>
+                        <option value="naturalnotes">Natural Notes</option>
+                        <option value="nuttynotes">Nutty Notes</option>
+                        <option value="sweetnotes">Sweet Notes</option>
+                        <option value="woodvegetalnotes">Wood & Vegetal Notes</option>
+                    </select>
                     <label for="cigarFlavour">Flavour</label>
                 </div>
             </div>
@@ -82,8 +121,17 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-wine-bottle prefix icon-color"></i>
-                    <input id="cigarAroma" name="cigarAroma" minlength="5" maxlength="300" 
-                        type="text" class="validate" required>
+                    <select name="cigarAroma" id="cigarAroma" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="earthminerals">Earth & Minerals</option>
+                        <option value="flowers">Flowers</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="herbsspices">Herbs & Spices</option>
+                        <option value="nonflavours">Non Flavours</option>
+                        <option value="nuts">Nuts</option>
+                        <option value="other">Other Aromas</option>
+                        <option value="plants">Plants</option>
+                    </select>
                     <label for="cigarAroma">Aroma</label>
                 </div>
             </div>
@@ -91,8 +139,13 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-burn prefix icon-color"></i>
-                    <input id="cigarBurn" name="cigarBurn" minlength="5" maxlength="100" 
-                        type="text" class="validate" required>
+                    <select name="cigarBurn" id="cigarBurn" class="validate" required>
+                        <option value="" disabled selected>Please select</option>
+                        <option value="canoeing">Canoeing</option>
+                        <option value="coning">Coning</option>
+                        <option value="even">Even</option>
+                        <option value="tunneling">Tunneling</option>
+                    </select>
                     <label for="cigarBurn">Burn</label>
                 </div>
             </div>
@@ -101,8 +154,8 @@
                 <div class="input-field col s12">
                     <i class="fas fa-money-bill-wave prefix icon-color"></i>
                     <input id="price" name="price" minlength="2" maxlength="8" 
-                        type="text" class="validate" required>
-                    <label for="price">Price</label>
+                        pattern="^[0-9£$]{2,8}$" type="text" class="validate" required>
+                    <label for="price">Price (eg. £10 or $10)</label>
                 </div>
             </div>
             <!-- Users Tasting Notes Section -->
@@ -110,7 +163,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-clipboard prefix icon-color"></i>
                      <textarea id="notes" name="notes" minlength="5" maxlength="1000" 
-                        class="materialize-textarea validate" required></textarea>
+                        pattern="^[a-zA-Z0-9]{5,1000}$" class="materialize-textarea validate" required></textarea>
                     <label for="notes">Notes</label>
                 </div>
             </div>
