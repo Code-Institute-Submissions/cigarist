@@ -143,11 +143,17 @@ in the future I would like to implement more specific excepts to the project.
 * [Click version 7.1.2](https://pypi.org/project/click/)
     - Command line creation kit.
 
+* [DNS Python version 2.0.0](https://pypi.org/project/dnspython/)
+    - DNS Toolkit
+
 * [Flask version 1.1.2](https://flask.palletsprojects.com/en/1.1.x/)
     - A WSGI micro framework.
 
 * [Flask PyMongo version 2.3.0](https://flask-pymongo.readthedocs.io/en/latest/)
     - MongoDB support for Flask applications.
+
+* [Its Dangerous version 1.1.0](https://pypi.org/project/itsdangerous/)
+    - Sends data to untrusted environments safely.
 
 * [PyMongo version 3.11.2](https://pymongo.readthedocs.io/en/stable/)
     - A tool for Python to work with MongoDB.
