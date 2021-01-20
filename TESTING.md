@@ -138,6 +138,11 @@ the user will know to choose a new username.
 There is also a login link at the bottom of the register page. This can be used if a registered user lands
 accidentally on the register page and gives the user a chance to get to the login page.
 
+#### 404.html
+A custom 404 error page is created for when users try to go to a page that doesn't exist. The page offers the user
+information that tells them the page does not exist and also a link at the buttom to return to the homepage. The link
+worls well and when clicked takes the user back to the all posts page.
+
 #### Social Media Icons
 The three social media icons were tested by clicking on each icon. When pressed a new page is opened up and takes
 the user to the intended social media platform.
@@ -250,10 +255,8 @@ a problem with the main text. Some was displayed and the rest were sitting behin
 were cause problems with displaying more text.
     - I made the buttons inline so that more text can be shown.
 
+9. Adding drop down menus into the add_post.html was a problem due to Materialize's own css. Their property of display
+is set to hidden. So the validation didn't work.
+    - The fix was from the Flask mini project jQuery code that allowed the vaidation to work correctly.
+
 ---
-
-
-
-
-
-
