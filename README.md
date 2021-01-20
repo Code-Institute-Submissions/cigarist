@@ -143,17 +143,11 @@ in the future I would like to implement more specific excepts to the project.
 * [Click version 7.1.2](https://pypi.org/project/click/)
     - Command line creation kit.
 
-* [DNS Python version 2.0.0](https://pypi.org/project/dnspython/)
-    - DNS Toolkit.
-
 * [Flask version 1.1.2](https://flask.palletsprojects.com/en/1.1.x/)
     - A WSGI micro framework.
 
 * [Flask PyMongo version 2.3.0](https://flask-pymongo.readthedocs.io/en/latest/)
     - MongoDB support for Flask applications.
-
-* [Its Dangerous version 1.1.0](https://itsdangerous.palletsprojects.com/en/1.1.x/)
-    - Sends data to untrusted environments safely.
 
 * [PyMongo version 3.11.2](https://pymongo.readthedocs.io/en/stable/)
     - A tool for Python to work with MongoDB.
@@ -306,6 +300,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 2. Type in **python3 app.py** to run the app
 
 ---
+
+## Credits
+
+All images are from [Unsplash](https://unsplash.com/).
+
+Favicon from [Flaticon](https://www.flaticon.com/).
+
+Logo created from [Free Logo Design](https://www.freelogodesign.org/).
+
+Materialize select validate code from Flask mini project [Code Institute](https://codeinstitute.net/). 
+
 
 ## Acknowledgements
 1. I would like to thank all [Code Institute](https://codeinstitute.net/) tutors for all their support and help towards my project.
