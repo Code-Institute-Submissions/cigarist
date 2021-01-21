@@ -1,11 +1,13 @@
 ## Testing
 
 ### HTML5
-All the HTML code was ran through [W3C Markup Validator](https://validator.w3.org/). Due to using Jinja templating
-I had to test the HTML code by going to each individual page and right clicking on the page to 'View Page Source' on
-Google Chrome before running my code in the html validator. As Python code is used in the website the HTML
-validator does not recognise this and throws up errors for a lot of the code. However, when I view the HTML code 
-through 'View Page Source' all earlier errors disappear and I have no errors or faults in any of my pages.
+All the HTML code was ran through [W3C Markup Validator](https://validator.w3.org/). All pages pages had errors when
+validating. I realised that this was due to my python code and jinja code. So when each page was loaded up on Chrome
+I view the HTML code through 'View Page Source' all errors disappear and I have no errors or faults in most of my 
+pages. The only page that came up with errors was the edit_post.html. There were seven errors in total for this page
+but all the errors were the same. "The select element cannot have more than one selected option descendant unless the 
+multiple attribute is specified." This error is down to jinja stopping the validation from going through. However, 
+when I go to the live site and test the edit_post.html page the page works as intended with no problems.
 
 ---
 
