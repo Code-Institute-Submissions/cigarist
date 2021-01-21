@@ -6,7 +6,8 @@ $(document).ready(function(){
     // Carousel function
     $('.carousel').carousel();
     // Drop down list
-    $('select').not('.disabled').formSelect();
+    $('select').formSelect();
+    // $('select').not('.disabled').formSelect();
     // Validation for Materialize select element
     validateMaterializeSelect();
     function validateMaterializeSelect() {
