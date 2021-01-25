@@ -2,12 +2,9 @@
 
 ### HTML5
 All the HTML code was ran through [W3C Markup Validator](https://validator.w3.org/). All pages pages had errors when
-validating. I realised that this was due to my python code and jinja code. So when each page was loaded up on Chrome
-I view the HTML code through 'View Page Source' all errors disappear and I have no errors or faults in most of my 
-pages. The only page that came up with errors was the edit_post.html. There were seven errors in total for this page
-but all the errors were the same. "The select element cannot have more than one selected option descendant unless the 
-multiple attribute is specified." This error is down to jinja stopping the validation from going through. However, 
-when I go to the live site and test the edit_post.html page the page works as intended with no problems.
+validating. I realised that this was due to my python and jinja code. So when each page was loaded up on Chrome
+I view the HTML code through 'View Page Source' all errors disappear and I have no errors or faults in my 
+pages. 
 
 ---
 
@@ -36,8 +33,8 @@ The responsiveness of this website was tested using [Am I Responsive](http://ami
 
 To make sure that the site is responsive on all popular screen sizes. I ran it through 
 [Am I Responsive](http://ami.responsivedesign.is/#) to check that it would look well in many different screen
-sizes. It had the desired results. I tested this across numerous devices and browsers. I had no problems from
-any of them.
+sizes. It had the desired results. I tested this across numerous devices (using Chrome Dev Tools) and browsers. 
+I had no problems from any of them.
 
 Below are my findings on devices and browsers laid out in tables:
 
@@ -261,4 +258,9 @@ were cause problems with displaying more text.
 is set to hidden. So the validation didn't work.
     - The fix was from the Flask mini project jQuery code that allowed the vaidation to work correctly.
 
+10. When testing the edit_post.html page I noticed on Apple devices there was an additional caret below each sub-heading
+which did not meant to show up on Chrome Dev Tools.
+    - The fix was adding -webkit-appearance: none so Apple OS does not render the caret unexpectedly. Once this 
+    property was included the caret was no longer visble and works well on iOS devices.
+    
 ---
