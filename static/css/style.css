@@ -78,12 +78,16 @@ h2 {
     font-size: 25px;
 }
 
+
+/* Carousel will not show unless in larger screen sizes */
 @media (max-width:800px) {
     .carousel {
         display:none !important;
     }
 }
 
+
+/* Hides extra caret when viewed in Apple devices */
 select {
     -webkit-appearance: none;
 }
