@@ -83,3 +83,7 @@ h2 {
         display:none !important;
     }
 }
+
+select {
+    -webkit-appeance: none;
+}
