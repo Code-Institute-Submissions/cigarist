@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="far fa-circle prefix icon-color"></i>
-                    <select name="ringGauge" id="ringGauge" class="validate" required>
+                    <select name="ringGauge" id="ringGauge" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="28" {% if tastingNotes.ringGauge == "28" %} selected {% endif %}>28 Ring Gauge </option>
                         <option value="30" {% if tastingNotes.ringGauge == "30" %} selected {% endif %}>30 Ring Gauge</option>
@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="far fa-hand-paper prefix icon-color"></i>
-                    <select name="handMade" id="handMade" class="validate" required>
+                    <select name="handMade" id="handMade" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="Yes" {% if tastingNotes.handMade == "Yes" %} selected {% endif %}>Yes</option>
                         <option value="No" {% if tastingNotes.handMade == "No" %} selected {% endif %}>No</option>
@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-dumbbell prefix icon-color"></i>
-                    <select name="cigarStrength" id="cigarStrength" class="validate" required>
+                    <select name="cigarStrength" id="cigarStrength" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="Mild" {% if tastingNotes.cigarStrength == "Mild" %} selected {% endif %}>Mild</option>
                         <option value="Medium" {% if tastingNotes.cigarStrength == "Medium" %} selected {% endif %}>Medium</option>
@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-lungs prefix icon-color"></i>
-                    <select name="cigarDraw" id="cigarDraw" class="validate" required>
+                    <select name="cigarDraw" id="cigarDraw" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="Easy" {% if tastingNotes.cigarDraw == "Easy" %} selected {% endif %}>Easy</option>
                         <option value="Normal" {% if tastingNotes.cigarDraw == "Normal" %} selected {% endif %}>Normal</option>
@@ -106,7 +106,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-bacon prefix icon-color"></i>
-                    <select name="cigarFlavour" id="cigarFlavour" class="validate" required>
+                    <select name="cigarFlavour" id="cigarFlavour" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="Coffee Notes" {% if tastingNotes.cigarFlavour == "Coffee Notes" %} selected {% endif %}>Coffee Notes</option>
                         <option value="Herb & Spice Notes" {% if tastingNotes.cigarFlavour == "Herb & Spice Notes" %} selected {% endif %}>Herb & Spice Notes</option>
@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-wine-bottle prefix icon-color"></i>
-                    <select name="cigarAroma" id="cigarAroma" class="validate" required>
+                    <select name="cigarAroma" id="cigarAroma" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="Earth & Minerals" {% if tastingNotes.cigarAroma == "Earth & Minerals" %} selected {% endif %}>Earth & Minerals</option>
                         <option value="Flowers" {% if tastingNotes.cigarAroma == "Flowers" %} selected {% endif %}>Flowers</option>
@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-burn prefix icon-color"></i>
-                    <select name="cigarBurn" id="cigarBurn" class="validate" required>
+                    <select name="cigarBurn" id="cigarBurn" class="validate" required multiple>
                         <option value="" disabled selected>Please Select</option>
                         <option value="Canoeing" {% if tastingNotes.cigarBurn == "Canoeing" %} selected {% endif %}>Canoeing</option>
                         <option value="Coning" {% if tastingNotes.cigarBurn == "Coning" %} selected {% endif %}>Coning</option>
